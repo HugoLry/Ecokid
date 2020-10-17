@@ -1,0 +1,35 @@
+video.bg_vid {
+    position: fixed; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background: url(images/animationAccueil.jpg) no-repeat;
+    background-size: cover;
+  }
+
+h1{
+    font-family: 'Bellota', cursive;
+    font-weight: bold;
+    font-size: 5.625rem;
+}
+
+h2{
+    font-family: 'Bellota', cursive;
+    font-weight: 400;
+    font-size: 3.125rem;
+}
+
+.enter{
+    font-family: 'Bellota', cursive;
+    font-weight: bold;
+    font-size: 4.313rem;
+    border: 1px solid #B1ECDC;
+    border-radius: 39px;
+    padding: 4px 73px 14px ;
+    background-color: #B1ECDC;
+    display: inline;
+}
