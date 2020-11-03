@@ -77,11 +77,35 @@ img {
  @media only screen and (orientation:portrait) {
 
 
-video, h1, h2, a, img{
+ h1, h2, a{
 	display: none;
 }
 #avertissement {
 	display: block;
+}
+
+body {
+    display: flex;
+    text-align: center;
+    font-size: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    z-index: -2;
+    top: 35vh;
+    width: 20vh;
+}
+
+.turn {
+    top: 60vh;
+    width: 40vw;
+}
+
+video {
+    z-index: -4;
+    bottom: 0vh;
 }
 }
  @media only screen and (orientation:landscape) {
