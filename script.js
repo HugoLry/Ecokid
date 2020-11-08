@@ -5,7 +5,7 @@ $(function() {
     });
  
     function lancerPage(a) {
-        redirect(a);
+        redirect(a);zeqetsef
         return false;
     }
  
