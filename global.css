@@ -1,0 +1,104 @@
+@media only screen and (orientation:landscape) {
+    #avertissement {
+        display: none;
+
+    }
+
+    img.turn {
+        display: none;
+    }
+}
+
+#avertissement {
+    display: none;
+}
+
+@media only screen and (orientation:portrait) {
+    img.turn {
+        display: initial;
+    }
+
+    h1,
+    h2,
+    a {
+        display: none;
+    }
+
+    #avertissement {
+        display: block;
+    }
+
+    body {
+        display: flex;
+        text-align: center;
+        font-size: 5vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        z-index: -2;
+        top: 35vh;
+        width: 20vh;
+    }
+
+    img.turn {
+        top: 60vh;
+        width: 40vw;
+    }
+
+    video {
+        z-index: -4;
+        bottom: 0vh;
+    }
+}
+
+body {
+    overflow: hidden;
+}
+
+.transition-out {
+    position: absolute;
+    z-index: 50;
+    width: 100vw;
+    height: 130vh;
+    top: -125vh;
+    left: 0vw;
+    transition: all 1.5s ease;
+}
+
+.transition-in {
+    position: absolute;
+    z-index: 50;
+    width: 100vw;
+    height: 130vh;
+    top: 0vh;
+    left: 0vw;
+    transition: all 1.5s ease 0.5s;
+}
+
+#logo {
+    position: absolute;
+    z-index: 100;
+}
+
+* {
+    font-family: Bellota;
+}
+
+#accueil {
+    position: absolute;
+    bottom: -1vh;
+    left: -1vw;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vw;
+    float: left;
+    transition: all 1s ease;
+}
+
+#logo {
+    position: absolute;
+    z-index: 10;
+    width: 7vw;
+}

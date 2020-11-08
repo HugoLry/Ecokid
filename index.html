@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1.0, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="icon" type="image/png" href="/ressources/lif.png" />
     <title>Ecokid</title>
 </head>
+
 <body>
-    <video muted autoplay loop src="/ressources/accueil.webm" type="video/webm" poster="../../ressources/accueil.jpg" id="accueil"></video>
+    <video muted autoplay loop src="/ressources/accueil.webm" type="video/webm" poster="../../ressources/accueil.jpg"
+        id="accueil"></video>
     <h1>Bienvenue sur Ecokid</h1>
     <h2>C'est toi qui décides !</h2>
-    <a href="https://www.google.com"><input type="button" value="C'est parti !"></a>
-    <img src="ressources/logo.png" alt="">
+    <a href="/pages/presentation/presentation.html"><input type="button" value="C'est parti !"></a>
+    <img id="logo" src="ressources/logo.png" alt="">
     <img class="turn" src="ressources/turntel.png" alt="">
     <div id="avertissement">
         <p>Attention, ce site n'est visible qu'en mode paysage !</p>
     </div>
+    <img class="transition-out" src="ressources/transition-nuage.png" alt="">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-     <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
