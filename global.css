@@ -113,8 +113,6 @@ div.bulle-texte {
     height: 39vh;
     right: 23vw;
     top: 5vh;
-    /* border: 2px greenyellow solid; */
-    
 }
 
 .bulle-texte img {
@@ -125,7 +123,6 @@ div.texte {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* border: 2px yellow solid; */
     top: 0%;
 }
 
@@ -137,8 +134,36 @@ p.texte_content {
     top: 50%;
     left: 7%;
     right: 12%;
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: center;
-    /* border: 2px black solid; */
     transform: translateY(-50%);
+}
+
+div[id*=reponse] {
+    position: absolute;
+    top: 55vh;
+    left: 40vw;
+}
+
+div[id*=reponse] * {
+    background-color: #89C443;
+    color: white;
+    border: 5px #89C443 solid;
+    border-radius: 50px;
+    padding: 1vw;
+    font-size: 2rem;
+    margin: 2vw;
+    outline: none;
+}
+
+div[id*=reponse] *:hover {
+    background-color: white;
+    color: #89C443;
+}
+
+div[id*=reponse] *:focus{
+    transform: scale(0.95);
+    transition: 0.3s all ease;
+    background-color: white;
+    color: #89C443;
 }
