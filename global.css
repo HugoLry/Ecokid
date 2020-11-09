@@ -164,4 +164,6 @@ div[id*=reponse] *:hover {
 div[id*=reponse] *:focus{
     transform: scale(0.95);
     transition: 0.3s all ease;
+    background-color: white;
+    color: #89C443;
 }
