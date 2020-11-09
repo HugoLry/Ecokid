@@ -12,6 +12,26 @@
 </head>
 
 <body>
+    <?php
+    $link = new PDO('mysql:host=localhost;dbname=ecokid', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    // pour le serveur de l'UPEM, remplacer localhost par sqletud.u-pem.fr
+
+    // Si les valeurs ne sons pas écrit ou si email et message sont pas nuls
+    if(isset($_POST["prenom"], $_POST["age"])){
+
+    // Attributions des valeurs
+    $prenom = $_POST["prenom"];
+    $age = $_POST["age"];
+
+    // On dit se que l'on veut mettre dans la BDD
+    $sql = "INSERT INTO user(prenom, age) VALUES (:prenom,:age)";
+
+    // On prépare la requête avant l'envoi
+    $req = $link->prepare($sql);
+    $req->execute(array(":prenom" => $prenom, ":age" => $age,));
+    }
+    ?>
+    
     <video muted autoplay loop src="../../ressources/accueil.webm" type="video/webm"
         poster="../../ressources/accueil.jpg" id="accueil"></video>
     <img id="logo" src="../../ressources/logo.png" alt="">
@@ -22,7 +42,7 @@
     </div>
     <img class="transition-in" src="../../ressources/transition-nuage.png" alt="">
 
-    <form class="formulaire">
+    <form method="POST" class="formulaire">
         <img src="../../ressources/nuagePresentation.png" alt="" class="nuage">
         <h1>Quel est ton prénom ?</h1>
         <label for="prenom"></label>
