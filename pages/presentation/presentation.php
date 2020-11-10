@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1.0, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../../global.css">
-    <link rel="icon" type="image/png" href="../../ressources/lif.png" />
+    
+    <link rel="icon" type="image/png" href="../../ressources/lif/lifndroite.png" />
     <title>Ecokid</title>
 </head>
 
@@ -17,23 +18,22 @@
     // pour le serveur de l'UPEM, remplacer localhost par sqletud.u-pem.fr
 
     // Si les valeurs ne sons pas écrit ou si email et message sont pas nuls
-    if(isset($_POST["prenom"], $_POST["age"])){
+    if (isset($_POST["prenom"], $_POST["age"])) {
 
-    // Attributions des valeurs
-    $prenom = $_POST["prenom"];
-    $age = $_POST["age"];
+        // Attributions des valeurs
+        $prenom = $_POST["prenom"];
+        $age = $_POST["age"];
 
-    // On dit se que l'on veut mettre dans la BDD
-    $sql = "INSERT INTO user(prenom, age) VALUES (:prenom,:age)";
+        // On dit se que l'on veut mettre dans la BDD
+        $sql = "INSERT INTO user(prenom, age) VALUES (:prenom,:age)";
 
-    // On prépare la requête avant l'envoi
-    $req = $link->prepare($sql);
-    $req->execute(array(":prenom" => $prenom, ":age" => $age,));
+        // On prépare la requête avant l'envoi
+        $req = $link->prepare($sql);
+        $req->execute(array(":prenom" => $prenom, ":age" => $age,));
     }
     ?>
-    
-    <video muted autoplay loop src="../../ressources/accueil.webm" type="video/webm"
-        poster="../../ressources/accueil.jpg" id="accueil"></video>
+
+    <video muted autoplay loop src="../../ressources/accueil.webm" type="video/webm" poster="../../ressources/accueil.jpg" id="accueil"></video>
     <img id="logo" src="../../ressources/logo.png" alt="">
 
     <div id="avertissement">
@@ -41,6 +41,7 @@
         <img class="turn" src="../../ressources/turntel.png" alt="">
     </div>
     <img class="transition-in" src="../../ressources/transition-nuage.png" alt="">
+    <img class="transition-out" src="../../ressources/transition-nuage.png" alt="">
 
     <form method="POST" class="formulaire">
         <img src="../../ressources/nuagePresentation.png" alt="" class="nuage">
@@ -58,7 +59,7 @@
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="../../script.js"></script> -->
 </body>
 
 </html>
