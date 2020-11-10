@@ -5,19 +5,23 @@
 }
 
 #avertissement {
-    display: none;
+    visibility: hidden;
 }
 
 @media only screen and (orientation:portrait) {
 
-    h1,
-    h2,
-    a {
-        display: none;
+    * {
+        visibility: hidden;
     }
 
-    #avertissement {
-        display: block;
+    #avertissement,
+    #avertissement p,
+    #avertissement img {
+        visibility: visible;
+    }
+
+    #avertissement .logo {
+        width: 20vh;
     }
 
     body {
@@ -94,5 +98,72 @@ body {
     max-width: 100vw;
     max-height: 100vw;
     float: left;
-    
+}
+
+.lif {
+    position: absolute;
+    height: 60vh;
+    right: 6vw;
+    top: 20vh;
+}
+
+div.bulle-texte {
+    position: absolute;
+    width: 30vw;
+    height: 39vh;
+    right: 23vw;
+    top: 5vh;
+}
+
+.bulle-texte img {
+    width: 100%;
+}
+
+div.texte {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+}
+
+p.texte_content {
+    position: absolute;
+    display: inline;
+    color: #89C443;
+    margin: 0;
+    top: 50%;
+    left: 7%;
+    right: 12%;
+    font-size: 2rem;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+div[id*=reponse] {
+    position: absolute;
+    top: 55vh;
+    left: 40vw;
+}
+
+div[id*=reponse] * {
+    background-color: #89C443;
+    color: white;
+    border: 5px #89C443 solid;
+    border-radius: 50px;
+    padding: 1vw;
+    font-size: 2rem;
+    margin: 2vw;
+    outline: none;
+}
+
+div[id*=reponse] *:hover {
+    background-color: white;
+    color: #89C443;
+}
+
+div[id*=reponse] *:focus{
+    transform: scale(0.95);
+    transition: 0.3s all ease;
+    background-color: white;
+    color: #89C443;
 }
