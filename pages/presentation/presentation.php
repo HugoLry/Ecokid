@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1.0, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    
+
+    <link rel="stylesheet" href="../../global.css">
     <link rel="stylesheet" href="style.css">
-    
+
     <link rel="icon" type="image/png" href="../../ressources/lif/lifndroite.png" />
     <title>Ecokid</title>
 </head>
@@ -33,7 +34,6 @@
     }
     ?>
 
-    <video muted autoplay loop src="../../ressources/accueil.webm" type="video/webm" poster="../../ressources/accueil.jpg" id="accueil"></video>
     <img id="logo" src="../../ressources/logo.png" alt="">
 
     <div id="avertissement">
@@ -43,6 +43,7 @@
     <img class="transition-in" src="../../ressources/transition-nuage.png" alt="">
     <img class="transition-out" src="../../ressources/transition-nuage.png" alt="">
 
+    
     <form method="POST" class="formulaire">
         <img src="../../ressources/nuagePresentation.png" alt="" class="nuage">
         <h1>Quel est ton prénom ?</h1>
@@ -54,12 +55,14 @@
         <input type="text" name="age" id="age" required>
 
         <div>
-            <button type="submit" class="button">Envoyer le message</button>
+            <a href="../jeu/jeu.html"><button type="submit" class="button">Commencer à jouer !</button></a>
         </div>
     </form>
+    <video muted autoplay loop src="../../ressources/accueil.webm" type="video/webm" poster="../../ressources/accueil.jpg" id="accueil"></video>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!-- <script src="../../script.js"></script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>

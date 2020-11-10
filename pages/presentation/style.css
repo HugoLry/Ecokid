@@ -1,6 +1,11 @@
-/* body,
+body,
 input {
     font-family: Bellota;
+}
+
+video, .formulaire {
+    position: relative;
+    top: 150vh;
 }
 
 .nuage {
@@ -19,19 +24,22 @@ button {
 }
 
 h1 {
-    margin-top: 8vh;
+    position: absolute;
+    top: 8vh;
     left: 40vw;
     font-size: 4vw;
 }
 
 h2 {
-    margin-top: 30vh;
+    position: absolute;
+    top: 30vh;
     left: 40vw;
     font-size: 4vw;
-} */
+}
 
-/* #prenom {
-    margin-top: 20vh;
+#prenom {
+    position: absolute;
+    top: 27vh;
     left: 40vw;
     width: 13vw;
     height: 8vh;
@@ -43,10 +51,11 @@ h2 {
     text-align: center;
     font-weight: bold;
     outline: none;
-} */
-/* 
+}
+
 #age {
-    margin-top: 42vh;
+    position: absolute;
+    top: 50vh;
     left: 40vw;
     width: 13vw;
     height: 8vh;
@@ -58,11 +67,12 @@ h2 {
     text-align: center;
     font-weight: bold;
     outline: none;
-} */
-/* 
+}
+
 .button {
-    margin-top: 42vh;
-    right: 34vw;
+    position: absolute;
+    top: 60vh;
+    right: 30vw;
     width: 11vw;
     min-height: 4vw;
     border-radius: 50px;
@@ -72,31 +82,39 @@ h2 {
     text-align: center;
     font-weight: bold;
     outline: none;
-} */
+}
 
-/* .button:hover {
+.button:hover {
     transition: all 1s ease;
     transform: scale(1.1);
     background-color: rgb(90, 197, 90);
 }
 
+.button:not(:hover) {
+    transition-duration: 1s;
+}
+
+.button:focus {
+    transform: scale(1.0);
+    transition-duration: 0.1s;
+}
 
 * {
-    transition-duration: 0.5s ease;
+    transition-duration: all 0.5s ease;
 }
 
 input:hover {
     background-color: rgb(86, 199, 86);
     transition-duration: 1s;
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 input:not(:hover) {
     transition-duration: 1s;
-} */
+}
 
-/* img {
+img {
     position: absolute;
     z-index: 10;
     width: 7vw;
-} */
+}
