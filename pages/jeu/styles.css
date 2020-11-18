@@ -5,6 +5,18 @@
     width: 100vw;
     height: 100vh;
     z-index: -5;
+    opacity: 1;
+    transition: 2s all ease 1s;
+}
+
+.fond2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -6;
+    opacity: 1;
 }
 
 .dechets {
@@ -13,4 +25,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    transform-origin: 90vw;
+    z-index: -4;
+    transition: all 1s ease;
 }
