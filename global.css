@@ -4,6 +4,11 @@
     }
 }
 
+input:hover {
+    cursor: pointer;
+}
+
+
 #avertissement {
     visibility: hidden;
 }
@@ -76,6 +81,7 @@ body {
     top: 0vh;
     left: 0vw;
     transition: all 1.5s ease 0.5s;
+    transform: translateY(-125vh);
 }
 
 #logo {
@@ -134,15 +140,15 @@ p.texte_content {
     top: 50%;
     left: 7%;
     right: 12%;
-    font-size: 2rem;
+    font-size: 2vw;
     text-align: center;
     transform: translateY(-50%);
 }
 
 div[id*=reponse] {
     position: absolute;
-    top: 55vh;
-    left: 40vw;
+    top: 65vh;
+    right: 20vw;
 }
 
 div[id*=reponse] * {

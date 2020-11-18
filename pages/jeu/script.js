@@ -1,4 +1,5 @@
 $(function () {
+    
     $("a").click(function () {
         var link = $(this).attr("href");
         $("input, #accueil, h1, h2").css({
@@ -19,5 +20,10 @@ $(function () {
             window.location.href = lnk;
         }, 2000);
     }
+
+    $('input').click(function () {
+        alert("test");
+        $('.dechets').css({"transition":"all 1s ease","transform":"scale(0)"});
+        
+    });
 });
-$(".transition-in").css("transform","translateY(-125vh)");

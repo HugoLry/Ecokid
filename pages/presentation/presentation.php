@@ -55,7 +55,7 @@
         <input type="text" name="age" id="age" required>
 
         <div>
-            <a href="../jeu/jeu.html"><button type="submit" class="button">Commencer à jouer !</button></a>
+        <button type="submit" class="button">Commencer à jouer !</button>
         </div>
     </form>
     <video muted autoplay loop src="../../ressources/accueil.webm" type="video/webm" poster="../../ressources/accueil.jpg" id="accueil"></video>
