@@ -103,6 +103,7 @@ body {
 .lif {
     position: absolute;
     height: 60vh;
+    width: 50vh;
     right: 6vw;
     top: 20vh;
 }
