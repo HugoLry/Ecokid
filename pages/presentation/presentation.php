@@ -53,7 +53,11 @@
         <input type="text" name="age" id="age" required>
 
         <div>
-            <button type="submit" class="button">Envoyer le message</button>
+            <button type="submit" class="button">
+            <a href="../presentation_lif/presentation_lif.php" class="lien">
+                Commencer à jouer
+            </a>
+            </button>
         </div>
     </form>
 
