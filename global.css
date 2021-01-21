@@ -84,6 +84,8 @@ body {
     width: 7vw;
     top: 2vh;
     left: 2vh;
+    background-image: url("ressources/logo.png");
+    height: 7vw;
 }
 
 * {
