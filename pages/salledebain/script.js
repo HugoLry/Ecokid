@@ -9,6 +9,11 @@ $('.elements *').click(function () {
     })
     setTimeout(() => {
         $(`.choix1`).css('opacity','0')
-    }, 500);
+        setTimeout(() => {
+            $(`.choix1`).remove()
+        }, 2000);
+        
+    }, 500)
+       
     
 })
