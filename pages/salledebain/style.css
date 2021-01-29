@@ -1,14 +1,49 @@
 body {
-    margin: 0;
-    background-color: #f2e5c7;
+  margin: 0;
+  background-color: #f2e5c7;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
-#fond {
-    height: 100vh;
-    width: 100vw;
-    background-image: url('../../ressources/salledebain.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
+.choix1 {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../ressources/salledebain/salledebain.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  transition-duration: 2s;
+}
+
+.elements {
+  display: ;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+button {
+    width: 30vw;
+    height: 10vh;
+    margin: auto;
+    background-color: #89C443;
+    color: white;
+    border: 5px #89C443 solid;
+    border-radius: 50px;
+    padding: 1vw;
+    font-size: 2rem;
+    margin: 2vw;
+    outline: none;
+    transition: 0.3s all ease;
+}
+
+button:hover, button:focus {
+    background-color: white;
+    color: #89C443;
+}
+
+button:focus{
+    transform: scale(0.95);
 }

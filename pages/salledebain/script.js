@@ -1,0 +1,14 @@
+$('.elements *').click(function () {
+    const element = $(this).attr("class");
+    $('body').css({
+        'background-image': `url("../../ressources/salledebain/salledebain${element}.jpg")`,
+        'background-size': 'contain',
+        'background-repeat': 'no-repeat',
+        'background-position-x': 'center',
+        'background-position-y': 'bottom'
+    })
+    setTimeout(() => {
+        $(`.choix1`).css('opacity','0')
+    }, 500);
+    
+})
