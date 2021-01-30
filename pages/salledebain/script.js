@@ -12,8 +12,8 @@ $('.elements *').click(function () {
         setTimeout(() => {
             $(`.choix1`).remove()
         }, 2000);
-        
     }, 500)
-       
-    
 })
+
+    $('.douche').css("width",$('.baignoire').innerWidth()+"px")
+
