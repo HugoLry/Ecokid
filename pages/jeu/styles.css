@@ -1,16 +1,53 @@
+@keyframes avion {
+  from {
+    left: -40vw;
+  }
+
+  to {
+    left: 200vw;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#port {
+  background: rgb(95, 102, 112);
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+.immeubles {
+  bottom: 34vh;
+}
+
+.route {
+  bottom: -2vh;
+}
+
+.avion {
+  animation: avion 60s linear forwards;
+}
+
 .fond {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
 }
 
 .dechets {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
