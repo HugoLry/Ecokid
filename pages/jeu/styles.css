@@ -8,21 +8,6 @@
   }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#port {
-  background: rgb(95, 102, 112);
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-}
-
 .immeubles {
   bottom: 34vh;
 }
@@ -54,4 +39,41 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+#first {
+  transform: translateX(-10%);
+}
+
+#second {
+  transform: translateX(10%);
+}
+
+.choix1 {
+  height: fit-content;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 50vh;
+  position: fixed;
+  bottom: 15vh;
+}
+
+.dechets {
+  position: absolute;
+}
+
+.div2 {
+  background-image: url("../../ressources/lif/lifngauche.png");
+}
+
+.div3{
+  color: white;
+  grid-area: 3 / 2 / 2 / 1;
+  text-align: center;
+  display: none;
+}
+
+.div3 p {
+  margin-top: 50%;
 }

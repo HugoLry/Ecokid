@@ -1,110 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-@media only screen and (orientation:landscape) {
-    #avertissement {
-        display: none;
-    }
+@media only screen and (orientation: landscape) {
+  #avertissement {
+    display: none;
+  }
 }
 
 #avertissement {
-    visibility: hidden;
+  visibility: hidden;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (orientation: portrait) {
+  * {
+    visibility: hidden;
+  }
 
-    * {
-        visibility: hidden;
-    }
+  #avertissement,
+  #avertissement p,
+  #avertissement img {
+    visibility: visible;
+  }
 
-    #avertissement,
-    #avertissement p,
-    #avertissement img {
-        visibility: visible;
-    }
+  #avertissement .logo {
+    width: 20vh;
+  }
 
-    #avertissement .logo {
-        width: 20vh;
-    }
+  body {
+    display: flex;
+    text-align: center;
+    font-size: 5vh;
+    align-items: center;
+    justify-content: center;
+  }
 
-    body {
-        display: flex;
-        text-align: center;
-        font-size: 5vh;
-        align-items: center;
-        justify-content: center;
-    }
+  #logo {
+    position: absolute;
+    z-index: -2;
+    top: 35vh;
+    width: 20vh;
+  }
 
-    #logo {
-        position: absolute;
-        z-index: -2;
-        top: 35vh;
-        width: 20vh;
-    }
+  img.turn {
+    position: absolute;
+    top: 60vh;
+    width: 40vw;
+    left: 30vw;
+  }
 
-    img.turn {
-        position: absolute;
-        top: 60vh;
-        width: 40vw;
-        left: 30vw;
-    }
-
-    video {
-        z-index: -3;
-        bottom: 0vh;
-    }
+  video {
+    z-index: -3;
+    bottom: 0vh;
+  }
 }
 
 body {
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
 .transition-out {
-    position: absolute;
-    z-index: 50;
-    width: 100vw;
-    min-width: 100%;
-    height: 130vh;
-    top: -125vh;
-    left: 0vw;
-    transition: all 1.5s ease;
+  position: absolute;
+  z-index: 50;
+  width: 100vw;
+  min-width: 100%;
+  height: 130vh;
+  top: -125vh;
+  left: 0vw;
+  transition: all 1.5s ease;
 }
 
 .transition-in {
-    position: absolute;
-    z-index: 50;
-    width: 100vw;
-    min-width: 100%;
-    height: 130vh;
-    top: 0vh;
-    left: 0vw;
-    transition: all 1.5s ease 0.5s;
+  position: absolute;
+  z-index: 50;
+  width: 100vw;
+  min-width: 100%;
+  height: 130vh;
+  top: 0vh;
+  left: 0vw;
+  transition: all 1.5s ease 0.5s;
 }
 
 #logo {
-    position: absolute;
-    z-index: 100;
-    width: 7vw;
-    top: 2vh;
-    left: 2vh;
-    background-image: url("ressources/logo.png");
-    height: 7vw;
+  position: absolute;
+  z-index: 100;
+  width: 7vw;
+  top: 2vh;
+  left: 2vh;
+  background-image: url("ressources/logo.png");
+  height: 7vw;
 }
 
 * {
-    font-family: Bellota;
+  font-family: Bellota;
 }
 
 #accueil {
-    position: absolute;
-    bottom: -1vh;
-    left: -1vw;
-    width: 100vw;
-    max-width: 100vw;
-    max-height: 100vw;
-    float: left;
+  position: absolute;
+  bottom: -1vh;
+  left: -1vw;
+  width: 100vw;
+  max-width: 100vw;
+  max-height: 100vw;
+  float: left;
 }
 
 /* .lif {
@@ -148,27 +147,65 @@ p.texte_content {
 } */
 
 button {
-    width: max-content;
-    height: max-content;
-    margin: auto;
-    background-color: #89c443;
-    color: white;
-    border: 5px #89c443 solid;
-    border-radius: 500px;
-    padding: 1vw;
-    font-size: 2rem;
-    outline: none;
-    transition: 0.3s all ease;
-  }
-
-div[id*=reponse] *:hover {
-    background-color: white;
-    color: #89C443;
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  background-color: #89c443;
+  color: white;
+  border: 5px #89c443 solid;
+  border-radius: 500px;
+  padding: 1vw;
+  font-size: 2rem;
+  outline: none;
+  transition: 0.3s all ease;
+  cursor: pointer;
 }
 
-div[id*=reponse] *:focus{
-    transform: scale(0.95);
-    transition: 0.3s all ease;
-    background-color: white;
-    color: #89C443;
+button:hover,
+button:focus {
+  background-color: white;
+  color: #89c443;
+}
+
+button:focus {
+  transform: scale(0.95);
+}
+
+.persolif {
+  display: grid;
+  grid-template-columns: repeat(2, 25vw);
+  grid-template-rows: 35vh 50vh;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  position: absolute;
+  right: 0;
+  bottom: 30vh;
+}
+
+.div1 {
+  grid-area: 1 / 2 / 3 / 1;
+  background-image: url("../../ressources/bulle-texte.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div2 {
+  grid-area: 2 / 2 / 3 / 3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#texte {
+  max-height: 30vh;
+  height: fit-content;
+  width: 18vw;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: justify;
+  font-size: 1.4vw;
 }
