@@ -35,6 +35,10 @@ body {
   animation: avion 60s linear forwards;
 }
 
+.nuages {
+  top: -2vh;
+}
+
 .fond {
   position: absolute;
   left: 0;

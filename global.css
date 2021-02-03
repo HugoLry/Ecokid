@@ -56,6 +56,9 @@
 
 body {
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
 }
 
 .transition-out {
@@ -104,7 +107,7 @@ body {
     float: left;
 }
 
-.lif {
+/* .lif {
     position: absolute;
     height: 60vh;
     width: 50vh;
@@ -142,24 +145,21 @@ p.texte_content {
     font-size: 2rem;
     text-align: center;
     transform: translateY(-50%);
-}
+} */
 
-div[id*=reponse] {
-    position: absolute;
-    top: 55vh;
-    left: 40vw;
-}
-
-div[id*=reponse] * {
-    background-color: #89C443;
+button {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    background-color: #89c443;
     color: white;
-    border: 5px #89C443 solid;
-    border-radius: 50px;
+    border: 5px #89c443 solid;
+    border-radius: 500px;
     padding: 1vw;
     font-size: 2rem;
-    margin: 2vw;
     outline: none;
-}
+    transition: 0.3s all ease;
+  }
 
 div[id*=reponse] *:hover {
     background-color: white;
