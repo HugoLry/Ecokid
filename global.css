@@ -106,46 +106,6 @@ body {
   float: left;
 }
 
-/* .lif {
-    position: absolute;
-    height: 60vh;
-    width: 50vh;
-    right: 6vw;
-    top: 20vh;
-}
-
-div.bulle-texte {
-    position: absolute;
-    width: 30vw;
-    height: 39vh;
-    right: 23vw;
-    top: 5vh;
-}
-
-.bulle-texte img {
-    width: 100%;
-}
-
-div.texte {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-}
-
-p.texte_content {
-    position: absolute;
-    display: inline;
-    color: #89C443;
-    margin: 0;
-    top: 50%;
-    left: 7%;
-    right: 12%;
-    font-size: 2rem;
-    text-align: center;
-    transform: translateY(-50%);
-} */
-
 button {
   width: max-content;
   height: max-content;
@@ -180,6 +140,7 @@ button:focus {
   position: absolute;
   right: 0;
   bottom: 30vh;
+  pointer-events: none;
 }
 
 .div1 {
@@ -208,4 +169,8 @@ button:focus {
   margin-bottom: auto;
   text-align: justify;
   font-size: 1.4vw;
+}
+
+[class*=reponse] {
+  white-space: nowrap;
 }

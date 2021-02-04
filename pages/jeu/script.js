@@ -24,7 +24,7 @@ $(document).ready(function () {
     function reWidth() {
         let long1 = $('#first').innerWidth();
         let long2 = $('#second').innerWidth();
-        $('#first,#second').attr('style','');
+        $('#first,#second').removeAttr('style');
         if (long1 < long2) {
             $('#first').css("width", $('#second').outerWidth() + "px")
             console.log('fait1')
