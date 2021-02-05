@@ -42,12 +42,19 @@ $(document).ready(function () {
     });
 
     $('.reponse1').click(() => {
-        $('.choix1').fadeOut(500, () => {
-            $('.reponse1,.reponse2').remove();
-        });
+        $('.reponse1,.reponse2').fadeOut(500);
+        setTimeout(() => {
+            $('.validation').fadeIn(500)
+        }, 700);
         $('#texte').text("Oui c'est exactement ce qu'il faut faire pour ne pas polluer la planète. Ramassons-les !");
+    })
+
+    $('.validation').click(() => {
         $('.div3').fadeIn("slow");
         $('.dechets').css('cursor', 'pointer');
+        $('.validation').fadeOut("slow", () => {
+            $('.validation').remove();
+        });
     })
 
     const savetxt = $('#texte').text();
@@ -69,7 +76,8 @@ $(document).ready(function () {
             $('.div3').fadeOut("slow");
             $('#texte').text("Maintenant que nous avons ramassé tous les déchets, qu'allons-nous en faire ?");
             $('.nuages').fadeOut(500);
-            $('.choix1,.reponse3,.reponse4').fadeIn(500, () => {
+            $('.reponse3,.reponse4').fadeIn(500);
+            setTimeout(() => {
                 reWidth(3);
                 $('.poubelles').width($('.reponse3').outerWidth());
                 $('.poubelles').first().offset({
@@ -85,7 +93,8 @@ $(document).ready(function () {
                 setTimeout(() => {
                     $('.poubelles').css('transform', 'translateY(-' + ($('.poubelles').first().height() + 10) + 'px)')
                 }, 1);
-            })
+            }, 10);
+
 
 
         }
