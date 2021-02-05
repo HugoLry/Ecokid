@@ -12,33 +12,6 @@
 </head>
 
 <body>
-    <?php
-    try{
-    //On établit la connexion
-    $link = new PDO('mysql:host=localhost;dbname=ecokid', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-    // pour le serveur de l'UPEM, remplacer localhost par sqletud.u-pem.fr
-
-    //On définit le mode d'erreur de PDO sur Exception
-    $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-
-    /*On capture les exceptions si une exception est lancée et on affiche
-    les informations relatives à celle-ci*/
-    catch(PDOException $e){
-        echo "Erreur : " . $e->getMessage();
-    }
-    
-    // On dit ce que l'on veut récupérer dans la BDD = dans la table fiche_metier je veux tout (* signifie tout) récupérer
-    $sql = "SELECT prenom FROM user ORDER BY id DESC LIMIT 1";
-    // On prépare la requête avant l'envoi
-    $req = $link -> prepare($sql);
-    // On exécute la requête
-    $req -> execute();
-
-    while ($data = $req -> fetch()) {
-        $prenom = $data['prenom'];
-    ?>
-    
     <img id="logo" src="../../ressources/logo.png" alt="">
 
     <div id="avertissement">
@@ -48,13 +21,22 @@
     <img class="transition-in" src="../../ressources/transition-nuage.png" alt="">
     <img src="../../ressources/Accueil3.png" alt="" class="background">
     <img src="../../ressources/lif/lifngauche.png" alt="" class="lif">
+    
     <div class="texte">
         <img src="../../ressources/nuagePresentationLIF.png" alt="" class="nuage">
-        <p><?php echo "Salut $prenom ! Moi c’est Lif aide nous à guérrir ce monde";}?></p>
+        <p>Nous voilà sur la planète Terra ! </br>
+            Comme tu peux le voir, les habitants l’ont beaucoup salie </br>
+            Nous avons besoin de ton aide pour nettoyer tout ça ! </br>
+            Je vais être ton guide dans cette aventure. </br>
+        </p>
+    </div>
+    
+    <div class="pret">
+        <p>Tu est prêt?</p>
     </div>
     <div class="button">
-        <a href="../enAvant_lif/enAvant_lif.html" class="lien">
-            Commencer à jouer
+        <a href="../" class="lien">
+            C'est parti ! 
         </a>
     </div>
 

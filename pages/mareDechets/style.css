@@ -13,11 +13,23 @@ input {
 }
 
 .nuage{
+    display: flex;
     position: absolute;
-    right: 0vw;
-    top: 10vh;
-    width: 98vh;
-    height: 49vh;
+    left: 58vh;
+    top: 3vh;
+    width: 88vh;
+    height: 44vh;
+}
+
+.texte p{
+    position: absolute;
+    font-size: 1.5vw;
+    width: 30vw;
+    z-index: 11;
+    left: 35vw;
+    top: 15vh;
+    color: black;
+    font-weight: 100;
 }
 
 p{
@@ -25,37 +37,10 @@ p{
     font-size: 2vw;
     width: 80vh;
     z-index: 11;
-    left: 58vw;
-    top: 13vw;
-}
-
-.texte{
-    right: 30vw;
-    width: 98vh;
-    height: 49vh;
-}
-
-.button{
-    display: flex;
-    position: absolute;
-    z-index: 10;
-    margin-top: 55vh;
-    right: 34vw;
-    width: 11vw;
-    min-height: 4vw;
-    border-radius: 50px;
-    border-style: hidden;
-    background-color: rgb(181, 241, 181);
-    font-size: 1vw;
-    text-align: center;
-    font-weight: bold;
-    outline: none;
-}
-
-a.lien{
-    color: black;
-    text-decoration: none;
-    margin: auto;
+    left: 31vw;
+    top: 50vh;
+    color: white;
+    font-weight: 900;
 }
 
 @media screen and (max-height: 400px) {

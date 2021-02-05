@@ -13,49 +13,53 @@ input {
 }
 
 .nuage{
+    display: flex;
     position: absolute;
-    right: 0vw;
+    left: 45vh;
     top: 10vh;
     width: 98vh;
     height: 49vh;
 }
 
-p{
+.texte p{
     position: absolute;
-    font-size: 2vw;
+    font-size: 1.5vw;
     width: 80vh;
     z-index: 11;
-    left: 58vw;
-    top: 13vw;
-}
-
-.texte{
-    right: 30vw;
-    width: 98vh;
-    height: 49vh;
+    left: 28vw;
+    top: 23vh;
 }
 
 .button{
     display: flex;
     position: absolute;
     z-index: 10;
-    margin-top: 55vh;
-    right: 34vw;
-    width: 11vw;
+    top: 65vh;
+    right: 32vw;
+    width: 20vw;
     min-height: 4vw;
     border-radius: 50px;
     border-style: hidden;
     background-color: rgb(181, 241, 181);
-    font-size: 1vw;
+    font-size: 2.5vw;
     text-align: center;
     font-weight: bold;
     outline: none;
+}
+
+.pret{
+    position: absolute;
+    font-size: 1.5vw;
+    z-index: 11;
+    top: 55vh;
+    right: 38vw;
 }
 
 a.lien{
     color: black;
     text-decoration: none;
     margin: auto;
+    padding: 5%;
 }
 
 @media screen and (max-height: 400px) {
