@@ -4,7 +4,7 @@
   }
 
   to {
-    left: 200vw;
+    left: 140vw;
   }
 }
 
@@ -17,20 +17,11 @@
 }
 
 .avion {
-  animation: avion 60s linear forwards;
+  animation: avion 30s linear forwards infinite;
 }
 
 .nuages {
   top: -2vh;
-}
-
-.fond {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -5;
 }
 
 .dechets {
@@ -76,4 +67,10 @@
 
 .div3 p {
   margin-top: 50%;
+}
+
+.poubelles {
+  display: none;
+  position: absolute;
+  transform-origin: bottom;
 }

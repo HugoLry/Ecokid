@@ -21,27 +21,30 @@ $(document).ready(function () {
     //         }, 2000);
     //     }
     // });
-    function reWidth() {
-        let long1 = $('#first').innerWidth();
-        let long2 = $('#second').innerWidth();
-        $('#first,#second').removeAttr('style');
+    function reWidth(i) {
+        let first = $('.reponse' + i);
+        let second = $('.reponse' + (i + 1));
+        let long1 = first.innerWidth();
+        let long2 = second.innerWidth();
+        $('.reponse' + i).removeAttr('style');
         if (long1 < long2) {
-            $('#first').css("width", $('#second').outerWidth() + "px")
+            first.css("width", second.outerWidth() + "px")
             console.log('fait1')
         } else {
-            $('#second').css("width", $('#first').outerWidth() + "px")
+            second.css("width", first.outerWidth() + "px")
             console.log('fait2')
         }
         console.log('oui')
     }
 
     $(window).on('load', function () {
-        reWidth()
+        reWidth(1)
     });
 
-
     $('.reponse1').click(() => {
-        $('.choix1').fadeOut(1000);
+        $('.choix1').fadeOut(500, () => {
+            $('.reponse1,.reponse2').remove();
+        });
         $('#texte').text("Oui c'est exactement ce qu'il faut faire pour ne pas polluer la planète. Ramassons-les !");
         $('.div3').fadeIn("slow");
         $('.dechets').css('cursor', 'pointer');
@@ -65,14 +68,41 @@ $(document).ready(function () {
             $('.dechets').fadeOut("slow");
             $('.div3').fadeOut("slow");
             $('#texte').text("Maintenant que nous avons ramassé tous les déchets, qu'allons-nous en faire ?");
-            $('.nuages').fadeOut(1000);
-            $('.reponse1').attr('class', 'reponse3').text("Utiliser les poubelles de tri");
-            $('.reponse2').attr('class', 'reponse4').text("Mettre à la poubelle");
+            $('.nuages').fadeOut(500);
+            $('.choix1,.reponse3,.reponse4').fadeIn(500, () => {
+                reWidth(3);
+                $('.poubelles').width($('.reponse3').outerWidth());
+                $('.poubelles').first().offset({
+                    top: $('.reponse3').offset().top,
+                    left: $('.reponse3').offset().left
+                });
+                $('.poubelles').last().offset({
+                    top: $('.reponse4').offset().top,
+                    left: $('.reponse4').offset().left
+                });
+                $('.poubelles').fadeIn("slow")
 
-            reWidth();
-            $('.choix1').fadeIn(1000);
+                setTimeout(() => {
+                    $('.poubelles').css('transform', 'translateY(-' + ($('.poubelles').first().height() + 10) + 'px)')
+                }, 1);
+            })
+
 
         }
     })
 
+    $('.reponse3').click(() => {
+        $('.choix1').fadeOut(500, () => {
+            $('.choix1').empty();
+        })
+        $('#texte').text("Oui très bien ! Trier les déchets va permettre de les recycler et de les transformer en de nouveaux objets.");
+    })
+
+    $('.reponse4').click(() => {
+        $('.choix1').fadeOut(500, () => {
+            $('.choix1').empty();
+        })
+        $('#texte').text("Mettre tous les déchets à la poubelle n'est pas idéal, les trier va permettre de les recycler et de les transformer en de nouveaux objets.");
+        $('.div2').css('background-image', 'url(../../ressources/lif/lifsgauche.png)')
+    })
 });
