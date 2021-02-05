@@ -118,6 +118,11 @@ button {
   outline: none;
   transition: 0.3s all ease;
   cursor: pointer;
+  opacity: 0;
+}
+
+.reponse1, .reponse2 {
+  opacity: 1;
 }
 
 button:hover,

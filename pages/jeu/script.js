@@ -42,9 +42,13 @@ $(document).ready(function () {
     });
 
     $('.reponse1').click(() => {
-        $('.reponse1,.reponse2').fadeOut(500);
+        $('.reponse1,.reponse2').fadeOut(500, () => {
+            $('.reponse1,.reponse2').remove();
+        });
         setTimeout(() => {
-            $('.validation').fadeIn(500)
+            $('.validation').fadeIn(500, () => {
+                $('.validation').css('opacity', '1')
+            });
         }, 700);
         $('#texte').text("Oui c'est exactement ce qu'il faut faire pour ne pas polluer la planète. Ramassons-les !");
     })
@@ -52,9 +56,7 @@ $(document).ready(function () {
     $('.validation').click(() => {
         $('.div3').fadeIn("slow");
         $('.dechets').css('cursor', 'pointer');
-        $('.validation').fadeOut("slow", () => {
-            $('.validation').remove();
-        });
+        $('.validation').fadeOut("slow");
     })
 
     const savetxt = $('#texte').text();
@@ -76,7 +78,9 @@ $(document).ready(function () {
             $('.div3').fadeOut("slow");
             $('#texte').text("Maintenant que nous avons ramassé tous les déchets, qu'allons-nous en faire ?");
             $('.nuages').fadeOut(500);
-            $('.reponse3,.reponse4').fadeIn(500);
+            $('.reponse3,.reponse4').fadeIn(500, () => {
+                $('.reponse3, .reponse4').css('opacity','1')
+            });
             setTimeout(() => {
                 reWidth(3);
                 $('.poubelles').width($('.reponse3').outerWidth());
@@ -88,7 +92,9 @@ $(document).ready(function () {
                     top: $('.reponse4').offset().top,
                     left: $('.reponse4').offset().left
                 });
-                $('.poubelles').fadeIn("slow")
+                $('.poubelles').fadeIn(100, () => {
+                    $('.poubelles').css('opacity', '1');
+                });
 
                 setTimeout(() => {
                     $('.poubelles').css('transform', 'translateY(-' + ($('.poubelles').first().height() + 10) + 'px)')
@@ -101,17 +107,15 @@ $(document).ready(function () {
     })
 
     $('.reponse3').click(() => {
-        $('.choix1').fadeOut(500, () => {
-            $('.choix1').empty();
-        })
+        $('.reponse3, .reponse4').fadeOut("slow")
         $('#texte').text("Oui très bien ! Trier les déchets va permettre de les recycler et de les transformer en de nouveaux objets.");
+        $('.poubelles').last().fadeOut("slow");
     })
 
     $('.reponse4').click(() => {
-        $('.choix1').fadeOut(500, () => {
-            $('.choix1').empty();
-        })
-        $('#texte').text("Mettre tous les déchets à la poubelle n'est pas idéal, les trier va permettre de les recycler et de les transformer en de nouveaux objets.");
+        $('.reponse3, .reponse4').fadeOut("slow")
+        $('#texte').css('font-size', '1.3vw').text("Mettre tous les déchets à la poubelle n'est pas idéal, les trier va permettre de les recycler et de les transformer en de nouveaux objets.");
         $('.div2').css('background-image', 'url(../../ressources/lif/lifsgauche.png)')
+        $('.poubelles').first().fadeOut("slow");
     })
 });
