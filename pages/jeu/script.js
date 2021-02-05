@@ -56,7 +56,9 @@ $(document).ready(function () {
     $('.validation').click(() => {
         $('.div3').fadeIn("slow");
         $('.dechets').css('cursor', 'pointer');
-        $('.validation').fadeOut("slow");
+        $('.validation').fadeOut("slow", () => {
+            $('.validation').css('opacity', '0')
+        });
     })
 
     const savetxt = $('#texte').text();
@@ -79,7 +81,7 @@ $(document).ready(function () {
             $('#texte').text("Maintenant que nous avons ramassé tous les déchets, qu'allons-nous en faire ?");
             $('.nuages').fadeOut(500);
             $('.reponse3,.reponse4').fadeIn(500, () => {
-                $('.reponse3, .reponse4').css('opacity','1')
+                $('.reponse3, .reponse4').css('opacity', '1')
             });
             setTimeout(() => {
                 reWidth(3);
@@ -109,13 +111,21 @@ $(document).ready(function () {
     $('.reponse3').click(() => {
         $('.reponse3, .reponse4').fadeOut("slow")
         $('#texte').text("Oui très bien ! Trier les déchets va permettre de les recycler et de les transformer en de nouveaux objets.");
-        $('.poubelles').last().fadeOut("slow");
+        $('.poubelles').last().fadeOut("slow", () => {
+            $('.validation').fadeIn(500, () => {
+                $('.validation').css('opacity', '1')
+            });
+        });
     })
 
     $('.reponse4').click(() => {
         $('.reponse3, .reponse4').fadeOut("slow")
         $('#texte').css('font-size', '1.3vw').text("Mettre tous les déchets à la poubelle n'est pas idéal, les trier va permettre de les recycler et de les transformer en de nouveaux objets.");
         $('.div2').css('background-image', 'url(../../ressources/lif/lifsgauche.png)')
-        $('.poubelles').first().fadeOut("slow");
+        $('.poubelles').first().fadeOut("slow", () => {
+            $('.validation').fadeIn(500, () => {
+                $('.validation').css('opacity', '1')
+            });
+        });
     })
 });
