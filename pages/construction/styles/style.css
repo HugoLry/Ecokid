@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+body {
+  overflow: hidden;
+  margin: 0;
+  background-color: #CBC8C5;
+}
+
+#logo {
+  position: absolute;
+  z-index: 100;
+  width: 7vw;
+  top: 2vh;
+  left: 2vh;
+  height: 7vw;
+}
+
+* {
+  font-family: Bellota;
+}
+
+.persolif {
+  display: grid;
+  grid-template-columns: repeat(2, 25vw);
+  grid-template-rows: 35vh 50vh;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  position: absolute;
+  right: 0;
+  bottom: 10vh;
+  pointer-events: none;
+}
+
+.div1 {
+  grid-area: 1 / 2 / 3 / 1;
+  background-image: url("../img/bulle-texte.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div2 {
+  grid-area: 2 / 2 / 3 / 3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#texte {
+  max-height: 30vh;
+  height: fit-content;
+  width: 18vw;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: justify;
+  font-size: 1.4vw;
+}
+
+.div2 {
+  background-image: url("../img/lifngauche.png");
+}
