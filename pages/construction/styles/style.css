@@ -3,11 +3,13 @@
 body {
   overflow: hidden;
   margin: 0;
-  background-color: #CBC8C5;
+  height: 100vh;
+  width: 100vw;
+  background-color: #cbc8c5;
 }
 
 #logo {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 7vw;
   top: 2vh;
@@ -26,8 +28,8 @@ body {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   position: absolute;
-  right: 0;
-  bottom: 10vh;
+  left: 60vw !important;
+  top: 50vh !important;
   pointer-events: none;
 }
 
@@ -61,4 +63,19 @@ body {
 
 .div2 {
   background-image: url("../img/lifngauche.png");
+}
+
+.reseaux {
+  position: relative;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  float: right  ;
+}
+
+.reseaux * {
+  width: 8vw;
+  margin: 1vw;
+  margin-left: 2vw;
+  
 }

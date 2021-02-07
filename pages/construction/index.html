@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="parallax/jquery.parallax.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <title>Ecokid</title>
     <style>
 
@@ -13,22 +15,45 @@
 </head>
 
 <body>
-<div class="video"><video src="vids/construction.mp4" muted autoplay loop style="width: 100vw; position: absolute; bottom: 0;">Chantier</video></div>
-
-<img src="img/logo.png" id="logo" alt="">
-
-<div class="persolif">
-    <div class="div1">
-        <p id="texte">Ecokid est en construction, rejoins-nous sur nos réseaux sociaux pour être informé ! À bientôt</p>
+    <div id="decor">
+        <video src="vids/construction.mp4" muted autoplay loop style="width: 120vw; top: 10vh;"
+            class="parallax-layer">Chantier</video>
     </div>
-    <div class="div2" id="lif">
+
+
+    <header>
+        <img src="img/logo.png" id="logo" alt="">
+        <div class="reseaux">
+            <a href="https://www.linkedin.com/company/ecokidfr/" target="_blank"><img src="img/linkedin.png" alt=""></a>
+            <a href="https://twitter.com/ecokidfr" target="_blank"><img src="img/twitter.png" alt=""></a>
+            <a href="https://www.instagram.com/ecokid.fr/" target="_blank"><img src="img/instagram.png" alt=""></a>
+        </div>
+    </header>
+
+
+    <div class="persolif">
+        <div class="div1">
+            <p id="texte">Ecokid est en construction, rejoins-nous sur nos réseaux sociaux pour être informé ! À bientôt
+            </p>
+        </div>
+        <div class="div2" id="lif">
+        </div>
     </div>
-</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="parallax/jquery.parallax.js"></script>
     <script>
+        $('.parallax-layer').parallax({
+            mouseport: $("body")
+        });
 
+        $('.persolif').parallax({
+            mouseport: $('video')
+        }, {
+            xparallax: '50px',
+            yparallax: '50px'
+        })
     </script>
 </body>
 
