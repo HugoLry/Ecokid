@@ -40,7 +40,7 @@
   transform: translateX(10%);
 }
 
-.choix1 {
+.choix {
   height: fit-content;
   width: max-content;
   left: 50%;
@@ -69,7 +69,7 @@
   margin-top: 50%;
 }
 
-.poubelles {
+.poubelles, #transport {
   display: none;
   position: absolute;
   transform-origin: bottom;

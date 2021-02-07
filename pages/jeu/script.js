@@ -29,12 +29,12 @@ $(document).ready(function () {
         $('.reponse' + i).removeAttr('style');
         if (long1 < long2) {
             first.css("width", second.outerWidth() + "px")
-            console.log('fait1')
+
         } else {
             second.css("width", first.outerWidth() + "px")
-            console.log('fait2')
+
         }
-        console.log('oui')
+
     }
 
     $(window).on('load', function () {
@@ -57,15 +57,12 @@ $(document).ready(function () {
 
     $('.validation').click(() => {
         if (n == 0) {
-            console.log("1" + n)
             $('.div3').fadeIn("slow");
             $('.dechets').css('cursor', 'pointer');
             $('.validation').fadeOut("slow", () => {
                 $('.validation').css('opacity', '0')
                 n = 1;
             });
-
-            console.log("2" + n)
         }
 
         if (n == 1) {
@@ -79,10 +76,37 @@ $(document).ready(function () {
                 $('.reponse5,.reponse6').fadeIn(500, () => {
                     $('.reponse5, .reponse6').css('opacity', '1')
                 });
-            });
+                setTimeout(() => {
+                    reWidth(5);
+                    $('.velo, .voiture').width($('.reponse5').outerWidth());
+                    $('.velo').offset({
+                        top: $('.reponse5').offset().top,
+                        left: $('.reponse5').offset().left
+                    });
+                    setTimeout(() => {
+                        $('.voiture').offset({
+                            top: $('.reponse6').offset().top,
+                            left: $('.reponse6').offset().left
+                        });
+                    }, 10);
 
+                    $('#transport').fadeIn(100, () => {
+                        $('#transport').css('opacity', '1');
+                    });
+
+                    setTimeout(() => {
+                        $('#transport').css('transform', 'translateY(-' + ($('#transport').height() + 10) + 'px)')
+                    }, 1);
+                }, 10);
+            });
+            $('#texte').css('font-size', '1.3vw').text('Maintenant que nous avons nettoyé cet endroit, nous allons nous rendre à la mare. Quel moyen de transport allons-nous utiliser ?');
+            $('#fond').fadeOut("slow");
+            n = 2;
         }
-        console.log("3" + n)
+
+        if (n == 1) {
+            
+        }
     })
 
     const savetxt = $('#texte').text();
@@ -137,21 +161,49 @@ $(document).ready(function () {
     $('.reponse3').click(() => {
         $('.reponse3, .reponse4').fadeOut("slow")
         $('#texte').text("Oui très bien ! Trier les déchets va permettre de les recycler et de les transformer en de nouveaux objets.");
-        $('.poubelles').last().fadeOut("slow", () => {
-            $('.validation').fadeIn(500, () => {
-                $('.validation').css('opacity', '1')
+        $('.poubelles').last().css('opacity', '0');
+        setTimeout(() => {
+            $('.poubelles').last().fadeOut("slow", () => {
+                $('.validation').fadeIn(500, () => {
+                    $('.validation').css('opacity', '1')
+                });
             });
-        });
+        }, 500);
+
     })
 
     $('.reponse4').click(() => {
         $('.reponse3, .reponse4').fadeOut("slow")
         $('#texte').css('font-size', '1.3vw').text("Mettre tous les déchets à la poubelle n'est pas idéal, les trier va permettre de les recycler et de les transformer en de nouveaux objets.");
         $('.div2').css('background-image', 'url(../../ressources/lif/lifsgauche.png)')
-        $('.poubelles').first().fadeOut("slow", () => {
+        $('.poubelles').first().css('opacity', '0');
+        setTimeout(() => {
+            $('.poubelles').first().fadeOut("slow", () => {
+                $('.validation').fadeIn(500, () => {
+                    $('.validation').css('opacity', '1')
+                });
+            });
+        }, 500);
+
+    })
+
+    $('.reponse5').click(() => {
+        $('#texte').css('font-size', '1.4vw');
+        $('.reponse5, .reponse6, .voiture').fadeOut("slow", () => {
             $('.validation').fadeIn(500, () => {
                 $('.validation').css('opacity', '1')
             });
         });
+        $('#texte').text("Très bon choix ! Le vélo ne va pas polluer contrairement à la voiture. En plus, c'est beaucoup plus amusant !");
+    })
+
+    $('.reponse6').click(() => {
+        $('#texte').css('font-size', '1.4vw');
+        $('.reponse5, .reponse6, .velo').fadeOut("slow", () => {
+            $('.validation').fadeIn(500, () => {
+                $('.validation').css('opacity', '1')
+            });
+        });
+        $('#texte').text("La voiture pollue beaucoup plus que le vélo et c'est beaucoup moins amusant...");
     })
 });
