@@ -53,12 +53,36 @@ $(document).ready(function () {
         $('#texte').text("Oui c'est exactement ce qu'il faut faire pour ne pas polluer la planète. Ramassons-les !");
     })
 
+    var n = 0;
+
     $('.validation').click(() => {
-        $('.div3').fadeIn("slow");
-        $('.dechets').css('cursor', 'pointer');
-        $('.validation').fadeOut("slow", () => {
-            $('.validation').css('opacity', '0')
-        });
+        if (n == 0) {
+            console.log("1" + n)
+            $('.div3').fadeIn("slow");
+            $('.dechets').css('cursor', 'pointer');
+            $('.validation').fadeOut("slow", () => {
+                $('.validation').css('opacity', '0')
+                n = 1;
+            });
+
+            console.log("2" + n)
+        }
+
+        if (n == 1) {
+            $('.poubelles').css('opacity', '0');
+            setTimeout(() => {
+                $('.poubelles').remove()
+            }, 1000);
+            $('.validation').fadeOut("slow", () => {
+                $('.validation').css('opacity', '0')
+                n = 2;
+                $('.reponse5,.reponse6').fadeIn(500, () => {
+                    $('.reponse5, .reponse6').css('opacity', '1')
+                });
+            });
+
+        }
+        console.log("3" + n)
     })
 
     const savetxt = $('#texte').text();
@@ -77,7 +101,9 @@ $(document).ready(function () {
     $('.dechets').click(() => {
         if ($('.div3').attr('style') == "display: block;") {
             $('.dechets').fadeOut("slow");
-            $('.div3').fadeOut("slow");
+            $('.div3').fadeOut("slow", () => {
+                $('.div3').remove();
+            });
             $('#texte').text("Maintenant que nous avons ramassé tous les déchets, qu'allons-nous en faire ?");
             $('.nuages').fadeOut(500);
             $('.reponse3,.reponse4').fadeIn(500, () => {
