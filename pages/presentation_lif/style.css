@@ -14,7 +14,7 @@ input {
 
 .nuage{
     position: absolute;
-    right: 0vw;
+    right: 30vw;
     top: 10vh;
     width: 98vh;
     height: 49vh;
@@ -25,7 +25,7 @@ p{
     font-size: 2vw;
     width: 80vh;
     z-index: 11;
-    left: 58vw;
+    right: 32vw;
     top: 13vw;
 }
 
@@ -35,11 +35,19 @@ p{
     height: 49vh;
 }
 
+.lif{
+    position: absolute;
+    height: 658px;
+    width: 509px;
+    top: 8vh;
+    right: 5vw;
+}
+
 .button{
     display: flex;
     position: absolute;
     z-index: 10;
-    margin-top: 55vh;
+    top: 60vh;
     right: 34vw;
     width: 11vw;
     min-height: 4vw;
