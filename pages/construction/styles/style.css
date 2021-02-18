@@ -77,5 +77,46 @@ body {
   width: 8vw;
   margin: 1vw;
   margin-left: 2vw;
-  
+}
+
+video {
+  width: 120vw;
+  top: 10vh;
+}
+
+.turntel {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .overflow {
+    display: none;
+  }
+
+  .persolif {
+    display: grid;
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: 20vh 30vh;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: absolute;
+    left: 50vw !important;
+    transform: translateX(-50%) translateY(-50%);
+    top: 20vh !important;
+    pointer-events: none;
+  }
+
+  #texte {
+    font-size: 2.2vw;
+    width: 75%;
+  }
+
+  .turntel {
+    display: block;
+    width: 50vw;
+    position: absolute;
+    top: 60vh;
+    left: 50vw;
+    transform: translateX(-50%);
+  }
 }
