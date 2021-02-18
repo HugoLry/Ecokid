@@ -149,13 +149,14 @@ button:focus {
 
 .div1 {
   grid-area: 1 / 2 / 3 / 1;
-  background-image: url("../../ressources/bulle-texte.png");
+  background-image: url("ressources/bulle-texte.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 11;
 }
 
 .div2 {

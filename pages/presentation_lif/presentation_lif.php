@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../global.css">
-    <link rel="icon" type="image/png" href="../../ressources/lif.png" />
+    <link rel="icon" type="image/png" href="../../ressources/lif/lifndroite.png" />
     <title>Ecokid</title>
 </head>
 
@@ -30,7 +30,7 @@
     
     // On dit ce que l'on veut récupérer dans la BDD = dans la table fiche_metier je veux tout (* signifie tout) récupérer
     $sql = "SELECT prenom FROM user ORDER BY id DESC LIMIT 1";
-    // On prépare la requête avant l'envoi
+    // On prépare la requête avant l'envoi
     $req = $link -> prepare($sql);
     // On exécute la requête
     $req -> execute();
@@ -45,9 +45,8 @@
         <p>Attention, ce site n'est visible qu'en mode paysage !</p>
         <img class="turn" src="../../ressources/turntel.png" alt="">
     </div>
-    <img class="transition-in" src="../../ressources/transition-nuage.png" alt="">
     <img src="../../ressources/Accueil3.png" alt="" class="background">
-    <img src="../../ressources/lif/lifngauche.png" alt="" class="lif">
+    <img src="../../ressources/lif/lifndroite.png" alt="" class="lif">
     <div class="texte">
         <img src="../../ressources/nuagePresentationLIF.png" alt="" class="nuage">
         <p><?php echo "Salut $prenom ! Moi c’est Lif aide nous à guérrir ce monde";}?></p>

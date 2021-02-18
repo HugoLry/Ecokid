@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../global.css">
-    <link rel="icon" type="image/png" href="../../ressources/lif.png" />
+    <link rel="icon" type="image/png" href="../../ressources/lif/lifndroite.png" />
     <title>Ecokid</title>
 </head>
 
@@ -40,7 +40,7 @@
         <p>Attention, ce site n'est visible qu'en mode paysage !</p>
         <img class="turn" src="../../ressources/turntel.png" alt="">
     </div>
-    <img class="transition-in" src="../../ressources/transition-nuage.png" alt="">
+
 
     <form method="POST" class="formulaire">
         <img src="../../ressources/nuagePresentation.png" alt="" class="nuage">

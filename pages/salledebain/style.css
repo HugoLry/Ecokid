@@ -31,4 +31,6 @@ body {
   transform: translateX(-10%);
 }
 
-
+.div2 {
+  background-image: url("../../ressources/lif/lifngauche.png");
+}

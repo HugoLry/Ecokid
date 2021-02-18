@@ -47,6 +47,14 @@ input {
     outline: none;
 }
 
+.lif{
+    position: absolute;
+    height: 658px;
+    width: 509px;
+    top: 8vh;
+    right: 5vw;
+}
+
 .pret{
     position: absolute;
     font-size: 1.5vw;
