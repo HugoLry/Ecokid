@@ -101,11 +101,13 @@ $(document).ready(function () {
             });
             $('#texte').css('font-size', '1.3vw').text('Maintenant que nous avons nettoyé cet endroit, nous allons nous rendre à la mare. Quel moyen de transport allons-nous utiliser ?');
             $('#fond').fadeOut("slow");
-            n = 2;
+             
         }
 
-        if (n == 1) {
-            
+        if (n == 2) {
+            setTimeout(() => {
+                window.location = "../mareDechets/mareDechets.html";
+            }, 2000);
         }
     })
 
@@ -198,6 +200,7 @@ $(document).ready(function () {
     })
 
     $('.reponse6').click(() => {
+            n = 2;
         $('#texte').css('font-size', '1.4vw');
         $('.reponse5, .reponse6, .velo').fadeOut("slow", () => {
             $('.validation').fadeIn(500, () => {
