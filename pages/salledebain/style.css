@@ -5,11 +5,6 @@ body {
 .choix1 {
   height: 100vh;
   width: 100vw;
-  background-image: url("../../ressources/salledebain/salledebain.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom;
   transition-duration: 2s;
 }
 
@@ -33,4 +28,13 @@ body {
 
 .div2 {
   background-image: url("../../ressources/lif/lifngauche.png");
+}
+
+#port {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -10;
 }
