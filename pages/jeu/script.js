@@ -21,20 +21,20 @@ $(document).ready(function () {
     //         }, 2000);
     //     }
     // });
+    
     function reWidth(i) {
         let first = $('.reponse' + i);
         let second = $('.reponse' + (i + 1));
         let long1 = first.innerWidth();
         let long2 = second.innerWidth();
+
         $('.reponse' + i).removeAttr('style');
         if (long1 < long2) {
             first.css("width", second.outerWidth() + "px")
-
         } else {
             second.css("width", first.outerWidth() + "px")
 
         }
-
     }
 
     $(window).on('load', function () {
