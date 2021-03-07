@@ -33,7 +33,6 @@ $(document).ready(function () {
             first.css("width", second.outerWidth() + "px")
         } else {
             second.css("width", first.outerWidth() + "px")
-
         }
     }
 
