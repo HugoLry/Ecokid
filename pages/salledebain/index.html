@@ -7,6 +7,7 @@
     <title>Ecokid</title>
     <link rel="stylesheet" href="../../global.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../scripts/jquery.parallax.css">
 </head>
 
 <body>
@@ -14,12 +15,12 @@
         <img src="../../ressources/salledebain/fondsdb.png" class="parallax-layer" style="width:100vw; height:100vh;" alt="">
         <img src="../../ressources/salledebain/elementssdb.png" class="parallax-layer" style="width:100.25vw; height:100.25vh;"
             alt="">
-        <img src="../../ressources/salledebain/douchebaignoire.png" style="width:100.5vw; height:100.5vh;" class="parallax-layer"
+        <img src="../../ressources/salledebain/douchebaignoire.png" style="width:100.5vw; height:100.5vh;" class="parallax-layer tochange"
             alt="">
     </div>
 
     <div id="fond">
-        <div class="choix1">
+        <div class="choix">
             <div class="elements">
                 <button class="douche">La douche</button>
                 <button class="baignoire">La baignoire</button>
@@ -41,7 +42,8 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="../../js/jquery.parallax.js"></script>
+    <script src="../../scripts/jquery.parallax.js"></script>
+    <script src="script.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             jQuery('.parallax-layer').parallax({

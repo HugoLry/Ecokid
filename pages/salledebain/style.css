@@ -2,7 +2,7 @@ body {
   background-color: #f2e5c7;
 }
 
-.choix1 {
+.choix {
   height: 100vh;
   width: 100vw;
   transition-duration: 2s;
