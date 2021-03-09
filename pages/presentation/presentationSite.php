@@ -27,7 +27,7 @@
         $sql = "INSERT INTO user(age) VALUES ({$_POST['age']})";
         $req = $db->prepare($sql);
         $req->execute();
-        header('Location: ../presentation_lif/presentation_lifSite.php');
+        header('Location: ../presentation_lif/presentation_lifSite.html');
     }
 
 
