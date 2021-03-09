@@ -9,7 +9,9 @@ body {
 }
 
 .persolif p {
-  width: 80%;
+  max-width: 82%;
+  width: fit-content;
+  margin: auto;
 }
 
 .elements {
@@ -22,11 +24,11 @@ body {
   bottom: 15vh;
 }
 
-.baignoire {
+.baignoire, .fermer {
   transform: translateX(10%);
 }
 
-.douche {
+.douche, .laisser {
   transform: translateX(-10%);
 }
 
