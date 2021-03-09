@@ -42,7 +42,7 @@
     </div>
 
 
-    <form method="POST" class="formulaire">
+    <form method="POST" action="" class="formulaire">
         <img src="../../ressources/nuagePresentation.png" alt="" class="nuage">
         <h1>Quel est ton prénom ?</h1>
         <label for="prenom"></label>

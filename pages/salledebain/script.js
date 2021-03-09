@@ -1,35 +1,44 @@
 $(document).ready(function () {
-
-    $(':is(.douche,.baignoire)').css('opacity', '1');
+    $('button').css('opacity', '1');
+    const prenom = sessionStorage.getItem('prenom');
     setTimeout(() => {
         $('.douche').css("width", $('.baignoire').innerWidth() + "px")
-    }, 10);
+    }, 2000);
 
 
-    $('.elements *').click(function () {
+    $('.baignoire').add('.douche').click(function () {
         if ($(this).attr("class") == 'douche') {
-            $('.div1 p').html("Très bon choix ! La douche va économiser beaucoup plus d'eau contrairement à un bain !")
+            $('.div1 p').text(`Très bon choix ${prenom} ! La douche va économiser beaucoup plus d'eau contrairement à un bain !`);
+            $('.tochange').last().fadeOut("slow")
         } else if ($(this).attr("class") == 'baignoire') {
             $('.div1 p').text("La douche aurait économisé beaucoup plus d'eau contrairement à un bain, c'est dommage !")
+            $('.tochange').first().fadeOut("slow")
         }
-        const element = $(this).attr("class");
-        console.log(`url("../../ressources/salledebain/sdb${element}.png")`)
-        // $('body').css({
-        //     'background-image': `url("../../ressources/salledebain/salledebain${element}.png")`,
-        //     'background-size': 'contain',
-        //     'background-repeat': 'no-repeat',
-        //     'background-position-x': 'center',
-        //     'background-position-y': 'bottom'
-        // })
-        $('.tochange').attr('src',`../../ressources/salledebain/sdb${element}.png`)
-        setTimeout(() => {
-            $(`.choix`).css('opacity', '0')
-            setTimeout(() => {
-                $(`.choix`).remove()
-            }, 2000);
-        }, 500)
+
+        $(':is(.douche, .baignoire)').fadeOut("slow", () => {
+            $('.valid').fadeIn("slow");
+        });
+
     })
 
+    var rep = 0;
+    $('.valid').click(() => {
+        if (rep == 0) {
+            $('.valid').fadeOut("slow");
+            rep = 1;
+            $('#port').css({
+                'transition-duration': '1s',
+                'transform': 'scale(2)'
+            })
+        }
+    })
+    $('body').click(() => {
+        // if (rep == 1) {
+        //     $('#port').css({
+        //         'transform': 'scale(1)'
+        //     })
+        // }
+    })
 
 
 })

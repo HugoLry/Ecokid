@@ -5,7 +5,11 @@ body {
 .choix {
   height: 100vh;
   width: 100vw;
-  transition-duration: 2s;
+  transition-duration: 1s;
+}
+
+.persolif p {
+  width: 80%;
 }
 
 .elements {
@@ -27,7 +31,7 @@ body {
 }
 
 .div2 {
-  background-image: url("../../ressources/lif/lifngauche.png");
+  background-image: url("../../ressources/lif/lifsale.png");
 }
 
 #port {
