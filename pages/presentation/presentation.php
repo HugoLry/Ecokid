@@ -52,13 +52,13 @@
         <label for="age"></label>
         <input type="text" name="age" id="age" required>
 
-        <div>
-            <button type="submit" class="button">
+
+        <button type="submit" class="button">
             <a href="../presentation_lif/presentation_lif.php" class="lien">
                 Commencer à jouer
             </a>
-            </button>
-        </div>
+        </button>
+
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

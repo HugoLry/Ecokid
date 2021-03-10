@@ -43,6 +43,18 @@ p{
     font-weight: 900;
 }
 
+.fond{
+    z-index: -10;
+}
+
+.montagnes{
+    z-index: -9;
+}
+
+.mare{
+    z-index: 55;
+}
+
 @media screen and (max-height: 400px) {
     #accueil {
         max-width: 800px;

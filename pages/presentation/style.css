@@ -11,6 +11,7 @@ input {
 }
 
 a.lien{
+    margin: auto;
     color: black;
     text-decoration: none;
 }
@@ -65,6 +66,7 @@ h2 {
 }
 
 .button{
+    display: flex;
     margin-top: 42vh;
     right: 34vw;
     width: 11vw;
@@ -76,6 +78,7 @@ h2 {
     text-align: center;
     font-weight: bold;
     outline: none;
+    opacity: 100;
 }
 
 #accueil {
