@@ -16,14 +16,10 @@ $(document).ready(function () {
 
                 $('.continuer').fadeOut(500, () => {
                     $('.continuer').remove();
-                });
 
-                $('.bouteille').fadeIn(500, () => {
-                    $('.bouteille').css('opacity', '1')
-                });
-
-                $('.carafe').fadeIn(500, () => {
-                    $('.carafe').css('opacity', '1')
+                    $('.bouteille, .carafe').fadeIn(500, () => {
+                        $('.bouteille, .carafe').css('opacity', '1')
+                    });
                 });
             });
 
@@ -32,14 +28,10 @@ $(document).ready(function () {
 
                 $('.continuer2').fadeIn(500, () => {
                     $('.continuer2').css('opacity', '1')
-                });
 
-                $('.bouteille').fadeOut(500, () => {
-                    $('.bouteille').remove();
-                });
-
-                $('.carafe').fadeOut(500, () => {
-                    $('.carafe').remove();
+                    $('.bouteille, .carafe').fadeOut(500, () => {
+                        $('.bouteille, .carafe').remove();
+                    });
                 });
             });
 
@@ -48,14 +40,10 @@ $(document).ready(function () {
 
                 $('.continuer2').fadeIn(500, () => {
                     $('.continuer2').css('opacity', '1')
-                });
 
-                $('.bouteille').fadeOut(500, () => {
-                    $('.bouteille').remove();
-                });
-
-                $('.carafe').fadeOut(500, () => {
-                    $('.carafe').remove();
+                    $('.bouteille, .carafe').fadeOut(500, () => {
+                        $('.bouteille, .carafe').remove();
+                    });
                 });
             });
 
@@ -76,14 +64,10 @@ $(document).ready(function () {
 
                 $('.continuer').fadeOut(500, () => {
                     $('.continuer').remove();
-                });
 
-                $('.bouteille').fadeIn(500, () => {
-                    $('.bouteille').css('opacity', '1')
-                });
-
-                $('.carafe').fadeIn(500, () => {
-                    $('.carafe').css('opacity', '1')
+                    $('.bouteille, .carafe').fadeIn(500, () => {
+                        $('.bouteille, .carafe').css('opacity', '1')
+                    });
                 });
             });
 
@@ -92,14 +76,10 @@ $(document).ready(function () {
 
                 $('.continuer2').fadeIn(500, () => {
                     $('.continuer2').css('opacity', '1')
-                });
 
-                $('.bouteille').fadeOut(500, () => {
-                    $('.bouteille').remove();
-                });
-
-                $('.carafe').fadeOut(500, () => {
-                    $('.carafe').remove();
+                    $('.bouteille, .carafe').fadeOut(500, () => {
+                        $('.bouteille, .carafe').remove();
+                    });
                 });
             });
 
@@ -108,14 +88,10 @@ $(document).ready(function () {
 
                 $('.continuer2').fadeIn(500, () => {
                     $('.continuer2').css('opacity', '1')
-                });
 
-                $('.bouteille').fadeOut(500, () => {
-                    $('.bouteille').remove();
-                });
-
-                $('.carafe').fadeOut(500, () => {
-                    $('.carafe').remove();
+                    $('.bouteille, .carafe').fadeOut(500, () => {
+                        $('.bouteille, .carafe').remove();
+                    });
                 });
             });
         }

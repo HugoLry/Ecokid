@@ -46,11 +46,11 @@ display: none;
 .elements {
   display: grid;
   grid-template-columns: repeat(2, 25vw);
-  grid-template-rows: 5vh;
+  grid-template-rows: 0vh;
   grid-row-gap: 0px;
   position: absolute;
   right: 17vw;
-  bottom: 10vh;
+  bottom: 1vh;
 }
 
 .baignoire {
