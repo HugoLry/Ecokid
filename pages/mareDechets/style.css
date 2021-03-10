@@ -78,6 +78,7 @@ input {
 .continuer a{
     text-decoration: none;
     color: white;
+    display: none;
 }
 
 .continuer a:hover{

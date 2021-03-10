@@ -8,8 +8,8 @@ $(document).ready(function () {
             });
 
             $('.continuer').fadeIn(500, () => {
-                $('.continuer').css('opacity', '1')
-                $('.continuer').css('cursor', 'pointer')
+                $('.continuer').css('opacity', '1', 'cursor', 'pointer')
+                $('.continuer a').css('display', 'inline')
             });
 
             $('.parallax-layer').fadeOut(500, () => {
