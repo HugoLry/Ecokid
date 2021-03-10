@@ -13,15 +13,8 @@
 
 <body>
     <?php
-    $db = new PDO('mysql:host=localhost;dbname=ecokid', 'root', '');
-
-    // if (isset($_POST['user'])) {
-    //     $age = $_POST["age"];
-    //     $sql = "INSERT INTO user(prenom, age) VALUES (Aubin,{$age})";
-    //     $req = $db->prepare($sql);
-    //     $req->execute();
-    //     header('Location: fight.php');
-    // }
+    // $db = new PDO('mysql:host=localhost;dbname=ecokid', 'root', '');
+    $db = new PDO('mysql:host=sqletud.u-pem.fr;dbname=aolivrie_db', 'aolivrie', 'n48suuqiiJ');
 
     if (isset($_POST['user'])) {
         $sql = "INSERT INTO user(age) VALUES ({$_POST['age']})";

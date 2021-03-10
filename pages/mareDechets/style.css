@@ -4,7 +4,18 @@ input {
     margin: 0;
 }
 
-.background{
+.div3 {
+    color: white;
+    grid-area: 3 / 2 / 2 / 1;
+    text-align: center;
+    display: none;
+}
+
+.div3 p {
+    margin-top: 50%;
+}
+
+.background {
     position: fixed;
     width: 100vw;
     height: 50vw;
@@ -12,7 +23,7 @@ input {
     max-height: 50vw;
 }
 
-.nuage{
+.nuage {
     display: flex;
     position: absolute;
     left: 58vh;
@@ -21,7 +32,7 @@ input {
     height: 44vh;
 }
 
-.texte p{
+.texte p {
     position: absolute;
     font-size: 1.5vw;
     width: 30vw;
@@ -32,7 +43,7 @@ input {
     font-weight: 100;
 }
 
-p{
+p {
     position: absolute;
     font-size: 2vw;
     width: 80vh;
@@ -41,24 +52,6 @@ p{
     top: 50vh;
     color: white;
     font-weight: 900;
-}
-
-.fond{
-    z-index: -10;
-}
-
-.montagnes{
-    z-index: -9;
-}
-
-.mare{
-    z-index: 55;
-}
-
-@media screen and (max-height: 400px) {
-    #accueil {
-        max-width: 800px;
-    }
 }
 
 * {
@@ -77,12 +70,17 @@ input:not(:hover) {
 
 img {
     position: absolute;
-    z-index: 10;
     width: 7vw;
 }
 
 #avertissement {
     display: none;
+}
+
+@media screen and (max-height: 400px) {
+    #accueil {
+        max-width: 800px;
+    }
 }
 
 @media only screen and (orientation:portrait) {
