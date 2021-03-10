@@ -98,10 +98,6 @@ button {
   cursor: pointer;
 }
 
-.reponse1, .reponse2 {
-  opacity: 1;
-}
-
 button:hover,
 button:focus {
   background-color: white;
@@ -155,4 +151,14 @@ button:focus {
 
 [class*=reponse] {
   white-space: nowrap;
+}
+
+.choix {
+  height: fit-content;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 50vh;
+  position: fixed;
+  bottom: 15vh;
 }

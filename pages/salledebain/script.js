@@ -84,7 +84,7 @@ $(document).ready(function () {
     })
 
     $('.eteindre').click(() => {
-        $('.eteindre').fadeTo("slow", 0, () => {
+        $(':is(.eteindre, .lumiere)').fadeTo("slow", 0, () => {
             setTimeout(() => {
                 $('.eteindre').fadeOut(0, () => {
                     $('.valid').fadeTo("slow", 1);
