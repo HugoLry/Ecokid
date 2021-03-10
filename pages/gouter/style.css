@@ -29,24 +29,28 @@ body {
   height: 100%;
 }
 
+.bouteille{
+ display: none;
+}
+
+.carafe{
+display: none;
+}
+
+.continuer, .continuer2{
+  display: none;  
+  position: absolute;
+  left: 17vw;
+}
+
 .elements {
   display: grid;
-  grid-template-columns: repeat(2, 45vw);
-  grid-template-rows: 15vh 15vh;
+  grid-template-columns: repeat(2, 25vw);
+  grid-template-rows: 5vh;
   grid-row-gap: 0px;
   position: absolute;
-  right: 0;
+  right: 17vw;
   bottom: 10vh;
-}
-
-.div3{
-  display: none;
-}
-
-button {
-  width: 25vw;
-  height: 27vh;
-  opacity: 0;
 }
 
 .baignoire {
