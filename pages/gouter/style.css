@@ -43,6 +43,16 @@ display: none;
   left: 17vw;
 }
 
+.continuer2 a{
+  text-decoration: none;
+  color: white;
+}
+
+.continuer2 a:hover{
+  text-decoration: none;
+  color: green;
+}
+
 .elements {
   display: grid;
   grid-template-columns: repeat(2, 25vw);
