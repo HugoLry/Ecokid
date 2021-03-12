@@ -8,7 +8,7 @@ $(document).ready(function () {
             'transform': 'scale(3)'
         })
         setTimeout(() => {
-            location.href = "../final/";
+            location.href = "../salon_suite/";
         }, 2000);
     })
 })

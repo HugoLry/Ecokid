@@ -1,22 +1,7 @@
-body {
-  background: rgb(212, 215, 216);
-  background: linear-gradient(180deg, rgba(212, 215, 216, 1) 78.5%, rgba(255, 255, 255, 1) 78.5%, rgba(255, 255, 255, 1) 79%, rgba(235, 235, 235, 1) 79%, rgba(235, 235, 235, 1) 82%, rgba(181, 170, 121, 1) 82%, rgba(181, 170, 121, 1) 100%);
-}
-
 .persolif p {
   max-width: 82%;
   width: fit-content;
   margin: auto;
-}
-
-.baignoire,
-.fermer {
-  transform: translateX(10%);
-}
-
-.douche,
-.laisser {
-  transform: translateX(-10%);
 }
 
 .div2 {
@@ -34,6 +19,17 @@ body {
   transform-origin: 20% 20%;
 }
 
-video {
-  object-fit: none;
+.fenetre {
+  border: white 30px solid;
+  position: absolute;
+  left: 0vw;
+  top: -100vh;
+  transition-duration: 1.5s;
+  transition-timing-function: cubic-bezier(.15,.29,.97,-0.16);
+  /* filter: blur(5px); */
+  background-color: rgba(255, 255, 255, 0.267);
+}
+
+.fin {
+  
 }
