@@ -1,0 +1,1 @@
+const BonneReponse = () => localStorage.setItem('score', parseInt(localStorage.getItem('score')) + 1);

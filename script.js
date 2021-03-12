@@ -19,5 +19,6 @@ $(function () {
             window.location.href = lnk;
         }, 2000);
     }
+    localStorage.setItem('score',0)
 });
 $(".transition-in").css("transform","translateY(-125vh)");

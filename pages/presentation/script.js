@@ -10,5 +10,5 @@ $(".transition-in").css("transform", "translateY(-125vh)");
 // }
 
 $('.button').mousedown(()=>{
-    sessionStorage.setItem('prenom', $('#prenom').val())
+    localStorage.setItem('prenom', $('#prenom').val())
 })

@@ -50,13 +50,13 @@
         <div class="choix">
             <button class="validation" id="valid">D'accord</button>
 
-            <button class="reponse1" id="first">Les ramasser</button>
+            <button class="reponse1" id="first" onclick="BonneReponse()">Les ramasser</button>
             <button class="reponse2" id="second">Ne rien faire</button>
 
-            <button class="reponse3" id="first" style="display: none;">Utiliser les poubelles de tri</button>
+            <button class="reponse3" id="first" style="display: none;" onclick="BonneReponse()">Utiliser les poubelles de tri</button>
             <button class="reponse4" id="second" style="display: none;">Mettre à la poubelle</button>
 
-            <button class="reponse5" id="first" style="display: none;">Le vélo</button>
+            <button class="reponse5" id="first" style="display: none;" onclick="BonneReponse()">Le vélo</button>
             <button class="reponse6" id="second" style="display: none;">La voiture</button>
         </div>
         <div class="persolif">
@@ -74,6 +74,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="../../scripts/jquery.parallax.js"></script>
+    <script src="../../global.js"></script>
     <script src="script.js"></script>
     <script>
         $('.parallax-layer').parallax({

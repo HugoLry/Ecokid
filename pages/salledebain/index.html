@@ -29,11 +29,11 @@
     <div id="fond">
         <div class="choix">
             <button class="valid" style="display: none;">D'accord</button>
-            <button class="douche">La douche</button>
+            <button class="douche" onclick="BonneReponse()">La douche</button>
             <button class="baignoire">La baignoire</button>
             <button class="laisser" style="display: none;">Laisser l'eau couler</button>
-            <button class="fermer" style="display: none;">Fermer le robinet</button>
-            <button class="eteindre" style="display: none;">Éteindre la lumière</button>
+            <button class="fermer" style="display: none;" onclick="BonneReponse()">Fermer le robinet</button>
+            <button class="eteindre" style="display: none;" onclick="BonneReponse()">Éteindre la lumière</button>
         </div>
         <div class="persolif">
             <div class="div1">
@@ -53,6 +53,7 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="../../scripts/jquery.parallax.js"></script>
     <script src="script.js"></script>
+    <script src="../../global.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             jQuery('.parallax-layer').parallax({

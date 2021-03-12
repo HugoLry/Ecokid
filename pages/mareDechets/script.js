@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('button').click(function () {
         if ($(this).attr("class") == 'ramasser') {
             $('.div1 p').html("Merci d’avoir nettoyé l’habitat des poissons, ils seront tellement heureux maintenant !")
-            
+            BonneReponse();
             $('.div3').fadeOut(500, () => {
                 $('.div3').remove();
             });
@@ -16,7 +16,7 @@ $(document).ready(function () {
                 $('.parallax-layer').remove();
             });
 
-            $('.continuer').click(function(){
+            $('.continuer').click(function () {
                 $('.div1 p').html("Merci d’avoir nettoyé l’habitat des poissons, ils seront tellement heureux maintenant !")
             });
 
