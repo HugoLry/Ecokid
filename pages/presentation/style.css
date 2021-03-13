@@ -1,167 +1,164 @@
 body,
 input {
-    font-family: Bellota;
+  font-family: Bellota;
 }
 
 .nuage {
-    position: fixed;
-    width: 49vw;
-    top: 0vh;
-    right: 40vh;
+  position: fixed;
+  width: 49vw;
+  top: 0vh;
+  right: 40vh;
 }
 
-a.lien{
-    margin: auto;
-    color: black;
-    text-decoration: none;
+a.lien {
+  margin: auto;
+  color: black;
+  text-decoration: none;
 }
 
 h1,
 h2,
-input, button {
-    position: absolute;
-    z-index: 10;
+input,
+button {
+  position: absolute;
+  z-index: 10;
 }
 
 h1 {
-    margin-top: 8vh;
-    left: 40vw;
-    font-size: 4vw;
+  margin-top: 8vh;
+  left: 40vw;
+  font-size: 4vw;
 }
 
 h2 {
-    margin-top: 30vh;
-    left: 40vw;
-    font-size: 4vw;
+  margin-top: 30vh;
+  left: 40vw;
+  font-size: 4vw;
 }
 
 #prenom {
-    margin-top: 20vh;
-    left: 40vw;
-    width: 13vw;
-    height: 8vh;
-    min-height: 4vw;
-    border-radius: 50px;
-    border-style: hidden;
-    background-color: rgb(181, 241, 181);
-    font-size: 2vw;
-    text-align: center;
-    font-weight: bold;
-    outline: none;
+  margin-top: 20vh;
+  left: 40vw;
+  width: 13vw;
+  height: 8vh;
+  min-height: 4vw;
+  border-radius: 50px;
+  border-style: hidden;
+  background-color: rgb(181, 241, 181);
+  font-size: 2vw;
+  text-align: center;
+  font-weight: bold;
+  outline: none;
 }
 
 #age {
-    margin-top: 42vh;
-    left: 40vw;
-    width: 13vw;
-    height: 8vh;
-    min-height: 4vw;
-    border-radius: 50px;
-    border-style: hidden;
-    background-color: rgb(181, 241, 181);
-    font-size: 2vw;
-    text-align: center;
-    font-weight: bold;
-    outline: none;
+  margin-top: 42vh;
+  left: 40vw;
+  width: 13vw;
+  height: 8vh;
+  min-height: 4vw;
+  border-radius: 50px;
+  border-style: hidden;
+  background-color: rgb(181, 241, 181);
+  font-size: 2vw;
+  text-align: center;
+  font-weight: bold;
+  outline: none;
 }
 
-.button{
-    display: flex;
-    margin-top: 42vh;
-    right: 34vw;
-    width: 11vw;
-    min-height: 4vw;
-    border-radius: 50px;
-    border-style: hidden;
-    background-color: rgb(181, 241, 181);
-    font-size: 1vw;
-    text-align: center;
-    font-weight: bold;
-    outline: none;
-    opacity: 100;
+.begin {
+  margin-top: 42vh;
+  right: 34vw;
+  width: 11vw;
+  min-height: 4vw;
+  border-radius: 50px;
+  border-style: hidden;
+  background-color: rgb(181, 241, 181);
+  font-size: 1vw;
+  text-align: center;
+  font-weight: bold;
+  outline: none;
 }
 
 #accueil {
-    z-index: -5;
-    position: fixed;
-    bottom: -1vh;
-    left: -1vw;
-    width: 100vw;
-    max-width: 100vw;
-    max-height: 100vw;
-    float: left;
-}
-
-@media screen and (max-height: 400px) {
-    #accueil {
-        max-width: 800px;
-    }
+  z-index: -5;
+  position: fixed;
+  bottom: -1vh;
+  left: -1vw;
+  width: 100vw;
+  max-width: 100vw;
+  max-height: 100vw;
+  float: left;
 }
 
 * {
-    transition-duration: 0.5s ease;
+  transition-duration: 0.5s ease;
 }
 
 input:hover {
-    background-color: lightgreen;
-    transition-duration: 1s;
-    transform: scale(1.1);
+  background-color: lightgreen;
+  transition-duration: 1s;
+  transform: scale(1.1);
 }
 
 input:not(:hover) {
-    transition-duration: 1s;
+  transition-duration: 1s;
 }
 
 img {
-    position: absolute;
-    z-index: 10;
-    width: 7vw;
+  position: absolute;
+  z-index: 10;
+  width: 7vw;
 }
 
 #avertissement {
+  display: none;
+}
+
+@media screen and (max-height: 400px) {
+  #accueil {
+    max-width: 800px;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  h1,
+  h2,
+  a {
     display: none;
+  }
+
+  #avertissement {
+    display: block;
+  }
+
+  body {
+    display: flex;
+    text-align: center;
+    font-size: 5vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    z-index: -2;
+    top: 35vh;
+    width: 20vh;
+  }
+
+  .turn {
+    top: 60vh;
+    width: 40vw;
+  }
+
+  video {
+    z-index: -4;
+    bottom: 0vh;
+  }
 }
 
-@media only screen and (orientation:portrait) {
-
-
-    h1,
-    h2,
-    a {
-        display: none;
-    }
-
-    #avertissement {
-        display: block;
-    }
-
-    body {
-        display: flex;
-        text-align: center;
-        font-size: 5vh;
-        align-items: center;
-        justify-content: center;
-    }
-
-    img {
-        z-index: -2;
-        top: 35vh;
-        width: 20vh;
-    }
-
-    .turn {
-        top: 60vh;
-        width: 40vw;
-    }
-
-    video {
-        z-index: -4;
-        bottom: 0vh;
-    }
-}
-
-@media only screen and (orientation:landscape) {
-    #avertissement {
-        display: none;
-    }
+@media only screen and (orientation: landscape) {
+  #avertissement {
+    display: none;
+  }
 }

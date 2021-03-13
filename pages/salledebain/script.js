@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('button').css('opacity', '1');
-    const prenom = sessionStorage.getItem('prenom');
+    const prenom = localStorage.getItem('prenom');
     setTimeout(() => {
         $('.douche').css("width", $('.baignoire').innerWidth() + "px")
     }, 2000);

@@ -1,27 +1,4 @@
 $(document).ready(function () {
-    // $(function () {
-    //     $("a").click(function () {
-    //         var link = $(this).attr("href");
-    //         $("input, #accueil, h1, h2").css({
-    //             "transition": "all 1s ease",
-    //             "transform": "translateY(100vh)"
-    //         });
-    //         $("img.transition-out").css("top", "0vh");
-    //         return lancerPage(link);
-    //     });
-
-    //     function lancerPage(a) {
-    //         redirect(a);
-    //         return false;
-    //     }
-
-    //     function redirect(lnk) {
-    //         setTimeout(function () {
-    //             window.location.href = lnk;
-    //         }, 2000);
-    //     }
-    // });
-    
     function reWidth(i) {
         let first = $('.reponse' + i);
         let second = $('.reponse' + (i + 1));
@@ -71,7 +48,6 @@ $(document).ready(function () {
             }, 1000);
             $('.validation').fadeOut("slow", () => {
                 $('.validation').css('opacity', '0')
-                n = 2;
                 $('.reponse5,.reponse6').fadeIn(500, () => {
                     $('.reponse5, .reponse6').css('opacity', '1')
                 });
@@ -100,13 +76,6 @@ $(document).ready(function () {
             });
             $('#texte').css('font-size', '1.3vw').text('Maintenant que nous avons nettoyé cet endroit, nous allons nous rendre à la mare. Quel moyen de transport allons-nous utiliser ?');
             $('#fond').fadeOut("slow");
-             
-        }
-
-        if (n == 2) {
-            setTimeout(() => {
-                window.location = "../mareDechets/mareDechets.html";
-            }, 2000);
         }
     })
 
@@ -199,12 +168,11 @@ $(document).ready(function () {
     })
 
     $('.reponse6').click(() => {
-            n = 2;
+        n = 2;
         $('#texte').css('font-size', '1.4vw');
-        $('.reponse5, .reponse6, .velo').fadeOut("slow", () => {
-            $('.validation').fadeIn(500, () => {
-                $('.validation').css('opacity', '1')
-            });
+        $('.velo').fadeTo(600, 0)
+        $('.reponse5, .reponse6').fadeOut("slow", () => {
+            $('#redirect').fadeIn(500)
         });
         $('#texte').text("La voiture pollue beaucoup plus que le vélo et c'est beaucoup moins amusant...");
     })

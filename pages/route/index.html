@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <img src="../../ressources/transition-nuage.png" alt="" class="transition">
+
     <div id="decor">
         <img src="../../ressources/route/fond_bleu.png" class="parallax-layer" style="width:101vw; height:101vh;"
             alt="">
@@ -30,11 +32,6 @@
     </div>
 
     <img id="logo" src="../../ressources/logo.png" alt="">
-    <!-- <div id="avertissement">
-        <p>Attention, ce site n'est visible qu'en mode paysage !</p>
-        <img class="turn" src="../../ressources/turntel.png" alt="">
-        <img class="logo" src="../../ressources/logo.png" alt="">
-    </div> -->
 
     <div id="interface">
         <div id="poubelles">
@@ -49,11 +46,13 @@
 
         <div class="choix">
             <button class="validation" id="valid">D'accord</button>
+            <button id="redirect" style="display: none;" href="../mareDechets/">D'accord</button>
 
             <button class="reponse1" id="first" onclick="BonneReponse()">Les ramasser</button>
             <button class="reponse2" id="second">Ne rien faire</button>
 
-            <button class="reponse3" id="first" style="display: none;" onclick="BonneReponse()">Utiliser les poubelles de tri</button>
+            <button class="reponse3" id="first" style="display: none;" onclick="BonneReponse()">Utiliser les poubelles
+                de tri</button>
             <button class="reponse4" id="second" style="display: none;">Mettre à la poubelle</button>
 
             <button class="reponse5" id="first" style="display: none;" onclick="BonneReponse()">Le vélo</button>

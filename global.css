@@ -60,6 +60,17 @@ body {
   margin: 0;
 }
 
+.transition {
+  position: absolute;
+  z-index: 50;
+  width: 100vw;
+}
+
+#logo,
+input {
+  cursor: pointer;
+}
+
 #logo {
   position: absolute;
   z-index: 100;
@@ -149,7 +160,7 @@ button:focus {
   font-size: 1.4vw;
 }
 
-[class*=reponse] {
+[class*="reponse"] {
   white-space: nowrap;
 }
 

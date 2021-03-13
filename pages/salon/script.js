@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const prenom = sessionStorage.getItem('prenom');
+    const prenom = localStorage.getItem('prenom');
     $('.prenom').text(prenom)
 
     $('.valid').click(() => {
@@ -8,7 +8,7 @@ $(document).ready(function () {
             'transform': 'scale(3)'
         })
         setTimeout(() => {
-            location.href = "../salon_suite/";
+            location.href = "../final/";
         }, 2000);
     })
 })
