@@ -1,0 +1,41 @@
+body {
+  background-image: url("../../ressources/ecokid/decor.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: bottom;
+  overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  width: fit-content;
+  font-style: italic;
+  font-size: 2.2rem;
+}
+
+.explications {
+  display: grid;
+  grid-template-columns: repeat(2, 45vw);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-left: 5vw;
+  white-space: normal;
+}
+
+.left, .right {
+    padding-top: 5vh;
+}
+
+.left {
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 4vw;
+  margin-right: 2vw; 
+}
+.right {
+  grid-area: 1 / 2 / 2 / 3;
+  margin: 4vw;
+  margin-left: 2vw; 
+}

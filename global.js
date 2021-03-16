@@ -15,9 +15,7 @@ $(window).on('load', function () {
             'transform': 'translateY(0px)'
         });
     };
-
-    const BonneReponse = () => localStorage.setItem('score', parseInt(localStorage.getItem('score')) + 1);
-
+    
     $('#redirect').click(function (e) {
         e.preventDefault();
         let link = $(this).attr('href');
@@ -30,7 +28,7 @@ $(window).on('load', function () {
     $('#logo').click(() => {
         transitionOut();
         setTimeout(() => {
-            document.location.href = "/";
+            document.location.href = "/devsecret/";
         }, 2000);
     })
 })

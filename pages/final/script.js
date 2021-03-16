@@ -10,9 +10,7 @@ $(document).ready(function () {
         $('.div1 p').text('Nous avons bien travaillé mais pas tous nos choix ont été justes pour soigner entièrement la planète.');
         $('.rep1').text('Quel dommage...')
     }
-    if(localStorage.getItem('score') > 9) {
-        localStorage.setItem('score',9);
-    }
+
     $('.rep1').click(() => {
         $('.div1 p').text('Maintenant, refermons la fenêtre pour garder la chaleur de la maison à l’intérieur et éviter de trop consommer avec le chauffage !')
         $('.rep1').fadeOut("slow", () => {
@@ -31,6 +29,9 @@ $(document).ready(function () {
                     $('.rep3').fadeIn("slow")
                 }, 500);
             })
+            if (localStorage.getItem('score') > 10) {
+                localStorage.setItem('score', 10);
+            }
             $('.note').text(localStorage.getItem('score'));
             $('.score').fadeIn("slow")
         }, 2000);

@@ -8,11 +8,13 @@
     <link rel="shortcut icon" href="../../ressources/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../global.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../../scripts/jquery.parallax.css">
 </head>
 
 <body>
-    <!-- <img src="../../ressources/transition-nuage.png" alt="" class="transition"> -->
+    <img src="../../ressources/transition-nuage.png" alt="" class="transition">
+
+    <img id="logo" src="../../ressources/logo.png" alt="">
+    
     <div id="port">
         <img src="../../ressources/final/ciel.png" class="parallax-layer" style="width:100vw; height:100vh;" alt="">
         <img src="../../ressources/final/nuages.png" class="parallax-layer" style="width:102vw; height:102vh;" alt="">
@@ -54,6 +56,10 @@
     <script src="script.js"></script>
     <script src="../../global.js"></script>
     <script type="text/javascript">
+        function BonneReponse() {
+            localStorage.setItem('score', parseInt(localStorage.getItem('score')) + 1);
+        }
+
         jQuery(document).ready(function () {
             jQuery('.parallax-layer').parallax({
                 mouseport: jQuery("body")

@@ -1,9 +1,10 @@
 video {
-  position: fixed;
-  bottom: -1vh;
-  left: -1vw;
   width: 100vw;
-  z-index: -5;
+  position: absolute;
+  left: -1vw;
+  bottom: -1vh;
+  transition: none;
+  overflow: hidden;
 }
 
 .reseaux {
@@ -20,8 +21,12 @@ video {
   margin-left: 2vw;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 10vh;
-    font-size: 3em;
+.titles {
+  text-align: center;
+  font-size: 2em;
+  position: absolute;
+  z-index: 10;
+  top: 5vh;
+  left: 50vw;
+  transform: translateX(-50%);
 }

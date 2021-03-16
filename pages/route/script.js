@@ -159,10 +159,9 @@ $(document).ready(function () {
 
     $('.reponse5').click(() => {
         $('#texte').css('font-size', '1.4vw');
-        $('.reponse5, .reponse6, .voiture').fadeOut("slow", () => {
-            $('.validation').fadeIn(500, () => {
-                $('.validation').css('opacity', '1')
-            });
+        $('.voiture').fadeTo(600, 0)
+        $('.reponse5, .reponse6').fadeOut("slow", () => {
+            $('#redirect').fadeIn(500)
         });
         $('#texte').text("Très bon choix ! Le vélo ne va pas polluer contrairement à la voiture. En plus, c'est beaucoup plus amusant !");
     })

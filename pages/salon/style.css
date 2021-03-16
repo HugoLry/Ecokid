@@ -9,6 +9,10 @@ body {
   margin: auto;
 }
 
+.transition {
+  transition-delay: 0.5s;
+}
+
 .baignoire,
 .fermer {
   transform: translateX(10%);
@@ -20,7 +24,7 @@ body {
 }
 
 .div2 {
-  background-image: url("../../ressources/lif/lifsale.png");
+  background-image: url("../../ressources/lif/lifngauche.png");
 }
 
 #port {

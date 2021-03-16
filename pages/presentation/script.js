@@ -1,7 +1,7 @@
 $(window).on('load', function () {
-    $('.begin').mousedown(()=>{
-        localStorage.setItem('prenom', $('#prenom').val())
-    })
+    $('.begin,#age').mousedown(() => localStorage.setItem('prenom', $('#prenom').val()))
+
+    $('#prenom').focusout(() => localStorage.setItem('prenom', $('#prenom').val()))
 
     const transitionIn = () => {
         $('.transition').css({

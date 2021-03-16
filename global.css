@@ -53,6 +53,10 @@
   }
 }
 
+.parallax-layer {
+  position: absolute;
+}
+
 body {
   overflow: hidden;
   height: 100vh;
@@ -156,8 +160,8 @@ button:focus {
   width: 18vw;
   margin-top: auto;
   margin-bottom: auto;
-  text-align: justify;
   font-size: 1.4vw;
+  white-space: pre-line;
 }
 
 [class*="reponse"] {

@@ -62,9 +62,6 @@ $(document).ready(function () {
             });
             $('.div1 p').text("Tu n'as pas oublié quelque chose avant de quitter la salle de bain ?");
         }
-        if (rep == 2) {
-            location.href = "../salon/index.html";
-        }
     })
 
     $(':is(.laisser, .fermer)').click(function () {
@@ -87,12 +84,11 @@ $(document).ready(function () {
         $(':is(.eteindre, .lumiere)').fadeTo("slow", 0, () => {
             setTimeout(() => {
                 $('.eteindre').fadeOut(0, () => {
-                    $('.valid').fadeTo("slow", 1);
+                    $('#redirect').fadeTo("slow", 1);
                 });
             }, 500);
         });
         $('.div1 p').text("Tu as raison ! Il faut toujours éteindre les lumières lorsque l’on quitte une pièce.");
-        rep = 2;
         $('#port').css({
             'filter': 'brightness(0.2)'
         })
