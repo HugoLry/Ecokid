@@ -28,16 +28,6 @@ h2 {
   left: 50vw;
   width: 18vw;
   height: 13vh;
-  min-height: 4vw;
-  border-radius: 50px;
-  border-style: hidden;
-  background-color: rgb(181, 241, 181);
-  font-size: 3vw;
-  text-align: center;
-  font-weight: bold;
-  outline: none;
-  transition-duration: 1s;
-  color: black;
 }
 
 #accueil {
@@ -52,56 +42,51 @@ h2 {
 }
 
 .explications {
-    position: absolute;
-    right: 2vw;
-    top: 2vh;
-    border-radius: 50%;
-    height: 4vw;
-    width: 4vw;
-    background-color: rgb(227, 227, 227);
-    color: rgb(72, 72, 72);
-    border: none;
-    transition: 1s;
+  position: absolute;
+  right: 2vw;
+  top: 2vh;
+  border-radius: 50%;
+  height: 4vw;
+  width: 4vw;
+  background-color: rgb(227, 227, 227);
+  color: rgb(72, 72, 72);
+  border: none;
+  transition: 1s;
 }
 
-.copyright, .mail {
-    position: fixed;
-    bottom: 0;
-    z-index: 5;
-    left: 50vw;
-    transform: translateX(-50%);
-    margin-bottom: 1vh;
+.copyright,
+.mail {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  left: 50vw;
+  transform: translateX(-50%);
+  margin-bottom: 1vh;
 }
 
 .mail {
-    color: black;
-    text-decoration: none;
-    left: 75vw;
+  color: black;
+  text-decoration: none;
+  left: 75vw;
 }
 
 .reseaux {
-    position: absolute;
-    right: 8vw;
-    top: 2vh;
-    display: flex;
-    height: 4vw;
-    align-items: center;
+  position: absolute;
+  right: 8vw;
+  top: 2vh;
+  display: flex;
+  height: 4vw;
+  align-items: center;
 }
 
-.reseaux *{
-    margin-right: 1vw;
-    width: 1.5vw;
-    cursor: pointer;
+.reseaux * {
+  margin-right: 1vw;
+  width: 1.5vw;
+  cursor: pointer;
 }
 
 @media screen and (max-height: 400px) {
   #accueil {
     max-width: 800px;
   }
-}
-
-.start:hover {
-  background-color: lightgreen;
-  transform: scale(1.1);
-  color: black;
 }

@@ -44,7 +44,7 @@ h2 {
   min-height: 4vw;
   border-radius: 50px;
   border-style: hidden;
-  background-color: rgb(181, 241, 181);
+  background-color: #89c443;
   font-size: 2vw;
   text-align: center;
   font-weight: bold;
@@ -59,7 +59,7 @@ h2 {
   min-height: 4vw;
   border-radius: 50px;
   border-style: hidden;
-  background-color: rgb(181, 241, 181);
+  background-color: #89c443;
   font-size: 2vw;
   text-align: center;
   font-weight: bold;
@@ -67,17 +67,10 @@ h2 {
 }
 
 .begin {
-  margin-top: 42vh;
-  right: 34vw;
-  width: 11vw;
-  min-height: 4vw;
-  border-radius: 50px;
-  border-style: hidden;
-  background-color: rgb(181, 241, 181);
+  top: 42vh;
+  left: 55vw;
+  height: 8vh;
   font-size: 1vw;
-  text-align: center;
-  font-weight: bold;
-  outline: none;
 }
 
 #accueil {
@@ -122,6 +115,7 @@ img {
 }
 
 @media only screen and (orientation: portrait) {
+
   h1,
   h2,
   a {

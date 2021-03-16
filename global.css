@@ -98,7 +98,8 @@ input {
   float: left;
 }
 
-button {
+button,
+input.begin {
   width: max-content;
   height: max-content;
   margin: auto;
@@ -114,7 +115,9 @@ button {
 }
 
 button:hover,
-button:focus {
+button:focus,
+input.begin:hover,
+input.begin:focus {
   background-color: white;
   color: #89c443;
 }

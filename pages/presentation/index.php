@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1.0, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="../../ressources/icon.png" />
     <title>Ecokid</title>
 </head>
- // $db = new PDO('mysql:host=sqletud.u-pem.fr;dbname=aolivrie_db', 'aolivrie', 'n48suuqiiJ');
+
 <body>
-    <?php
+    <?php 
+    // $db = new PDO('mysql:host=sqletud.u-pem.fr;dbname=aolivrie_db', 'aolivrie', 'n48suuqiiJ');
     $db = new PDO('mysql:host=localhost:3306;dbname=ecokid', 'ecokid', 'MAUYjH^7');
    
     if (isset($_POST['user'])) {
-        $sql = "INSERT INTO user(age) VALUES ({$_POST['age']})";
+        $sql = "INSERT INTO user(age, date_post) VALUES ({$_POST['age']}, NOW())";
         $req = $db->prepare($sql);
         $req->execute();
         header('Location: ../introduction/');   
@@ -47,6 +48,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="../../global.js"></script>
 </body>
 
 </html>
