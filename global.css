@@ -1,58 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-@media only screen and (orientation: landscape) {
-  #avertissement {
-    display: none;
-  }
-}
-
-#avertissement {
-  visibility: hidden;
-}
-
-@media only screen and (orientation: portrait) {
-  * {
-    visibility: hidden;
-  }
-
-  #avertissement,
-  #avertissement p,
-  #avertissement img {
-    visibility: visible;
-  }
-
-  #avertissement .logo {
-    width: 20vh;
-  }
-
-  body {
-    display: flex;
-    text-align: center;
-    font-size: 5vh;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #logo {
-    position: absolute;
-    z-index: -2;
-    top: 35vh;
-    width: 20vh;
-  }
-
-  img.turn {
-    position: absolute;
-    top: 60vh;
-    width: 40vw;
-    left: 30vw;
-  }
-
-  video {
-    z-index: -3;
-    bottom: 0vh;
-  }
-}
-
 .parallax-layer {
   position: absolute;
 }

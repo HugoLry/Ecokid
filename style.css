@@ -84,9 +84,3 @@ h2 {
   width: 1.5vw;
   cursor: pointer;
 }
-
-@media screen and (max-height: 400px) {
-  #accueil {
-    max-width: 800px;
-  }
-}

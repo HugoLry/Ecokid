@@ -4,18 +4,24 @@ $(window).on('load', function () {
     const transitionIn = () => {
         $('.transition').css({
             'transition': '1.5s ease-in-out',
-            'transform': 'translateY(-' + $('.transition').height() + 'px)'
+            'transform': 'translateY(-' + $('.transition').height()*1.5 + 'px)'
         });
+        console.log('changement')
     };
 
     transitionIn();
+    $(window).resize(() => {
+        setTimeout(() => {
+            transitionIn();
+        }, 100);
+    })
 
     const transitionOut = () => {
         $('.transition').css({
             'transform': 'translateY(0px)'
         });
     };
-    
+
     $('#redirect').click(function (e) {
         e.preventDefault();
         let link = $(this).attr('href');
@@ -31,4 +37,6 @@ $(window).on('load', function () {
             document.location.href = "/devsecret/";
         }, 2000);
     })
+
+
 })
