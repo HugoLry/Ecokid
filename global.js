@@ -4,12 +4,13 @@ $(window).on('load', function () {
     const transitionIn = () => {
         $('.transition').css({
             'transition': '1.5s ease-in-out',
-            'transform': 'translateY(-' + $('.transition').height()*1.5 + 'px)'
+            'transform': 'translateY(-' + $('.transition').height() * 1.5 + 'px)'
         });
         console.log('changement')
     };
 
     transitionIn();
+
     $(window).resize(() => {
         setTimeout(() => {
             transitionIn();
