@@ -1,4 +1,5 @@
 $(window).on('load', function () {
+
     const prenom = localStorage.getItem('prenom');
     $('.prenom').text(prenom);
     const transitionIn = () => {
@@ -6,8 +7,11 @@ $(window).on('load', function () {
             'transition': '1.5s ease-in-out',
             'transform': 'translateY(-' + $('.transition').height() * 1.5 + 'px)'
         });
-        console.log('changement')
     };
+
+    window.addEventListener("orientationchange", () => {
+        document.location.reload()
+    });
 
     transitionIn();
 

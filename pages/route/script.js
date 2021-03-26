@@ -1,21 +1,27 @@
 $(document).ready(function () {
-    function reWidth(i) {
-        let first = $('.reponse' + i);
-        let second = $('.reponse' + (i + 1));
-        let long1 = first.innerWidth();
-        let long2 = second.innerWidth();
+    // function reWidth(i) {
+    //     let first = $('.reponse' + i);
+    //     let second = $('.reponse' + (i + 1));
+    //     let long1 = first.innerWidth();
+    //     let long2 = second.innerWidth();
 
-        $('.reponse' + i).removeAttr('style');
-        if (long1 < long2) {
-            first.css("width", second.outerWidth() + "px")
-        } else {
-            second.css("width", first.outerWidth() + "px")
-        }
-    }
+    //     $('.reponse' + i).removeAttr('style');
+    //     if (long1 < long2) {
+    //         first.css("width", second.outerWidth() + "px")
+    //     } else {
+    //         second.css("width", first.outerWidth() + "px")
+    //     }
+    // }
 
-    $(window).on('load', function () {
-        reWidth(1)
-    });
+    // $(window).on('load', function () {
+    //     // reWidth(1)
+    // });
+    // window.addEventListener("orientationchange", ()=> {
+    //     setTimeout(() => {
+    //         // reWidth(1)
+    //     }, 300);
+        
+    //   });
 
     $('.reponse1').click(() => {
         $('.reponse1,.reponse2').fadeOut(500, () => {
@@ -52,7 +58,7 @@ $(document).ready(function () {
                     $('.reponse5, .reponse6').css('opacity', '1')
                 });
                 setTimeout(() => {
-                    reWidth(5);
+                    // reWidth(5);
                     $('.velo, .voiture').width($('.reponse5').outerWidth());
                     $('.velo').offset({
                         top: $('.reponse5').offset().top,
@@ -104,7 +110,7 @@ $(document).ready(function () {
                 $('.reponse3, .reponse4').css('opacity', '1')
             });
             setTimeout(() => {
-                reWidth(3);
+                // reWidth(3);
                 $('.poubelles').width($('.reponse3').outerWidth());
                 $('.poubelles').first().offset({
                     top: $('.reponse3').offset().top,
