@@ -22,6 +22,7 @@ input,
 button {
   position: absolute;
   z-index: 10;
+  transition-duration: 1s;
 }
 
 h1 {
@@ -49,6 +50,7 @@ h2 {
   text-align: center;
   font-weight: bold;
   outline: none;
+  color: white;
 }
 
 #age {
@@ -64,6 +66,7 @@ h2 {
   text-align: center;
   font-weight: bold;
   outline: none;
+  color: white;
 }
 
 .begin {
@@ -92,10 +95,6 @@ input:hover {
   background-color: lightgreen;
   transition-duration: 1s;
   transform: scale(1.1);
-}
-
-input:not(:hover) {
-  transition-duration: 1s;
 }
 
 img {

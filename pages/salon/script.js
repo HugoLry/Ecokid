@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('.prenom').text(prenom)
 
     $('.valid').click(() => {
-        $(':is(.valid, .div1)').fadeOut("slow")
+        $('.valid, .div1').fadeOut("slow")
         $('#port').css({
             'transform': 'scale(3)'
         });

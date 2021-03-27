@@ -6,78 +6,115 @@
     <meta name="viewport" content="width=1.0, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../styles/global.css">
     <link rel="icon" type="image/png" href="../../ressources/icon.png" />
+    <link rel="stylesheet" media="(orientation:portrait)" href="../../styles/portrait.css">
     <title>Ecokid</title>
 </head>
 
 <body>
-    <div id="decor">
-        <img src="../../ressources/mare/fond_bleu.png" class="parallax-layer" style="width:100vw; height:100vh;" alt="">
-        <img src="../../ressources/mare/montagnes.png" class="parallax-layer" style="width:102vw; height:102vh;" alt="">
-        <img src="../../ressources/mare/fond_sale-sol.png" class="parallax-layer" id="sale"
-            style="width:107vw; height:107vh;" alt="">
-        <img src="../../ressources/mare/fondPropre.png" class="parallax-layer" id="propre"
-            style="width:107vw; height:107vh; display: none;" alt="">
-        <img src="../../ressources/mare/maresale.png" alt="" class="parallax-layer" id="sale"
-            style="width:110vw; height:110vh;">
-        <img src="../../ressources/mare/marepropre.png" style="width:110vw; height:110vh; display: none;"
-            class="parallax-layer" id="propre2" alt="">
+    <div class="portrait">
+        <div class="portrait_img">
+            <img src="../../ressources/icon.png" alt="">
+            <img src="../../ressources/turntel.png" alt="">
+        </div>
+        <p>Ecokid n’est pas disponible dans ce format, tourne ton écran pour jouer !</p>
     </div>
 
-    <img id="logo" src="../../ressources/logo.png" alt="">
-
-    <img class="transition" src="../../ressources/transition-nuage.png" alt="">
-
-    <div id="interface">
-        <div class="choix">
-
-            <button class="ramasser" onclick="BonneReponse()">Ramasser</button>
-
-            <button class="continuer" href="../gouter/" id="redirect" style="display: none;">
-                Aller vers la suite !
-            </button>
+    <div class="main">
+        <div id="decor">
+            <img src="../../ressources/mare/fond_bleu.png" class="parallax-layer" style="width:100vw; height:100vh;"
+                alt="">
+            <img src="../../ressources/mare/montagnes.png" class="parallax-layer" style="width:102vw; height:102vh;"
+                alt="">
+            <img src="../../ressources/mare/fond_sale-sol.png" class="parallax-layer" id="sale"
+                style="width:107vw; height:107vh;" alt="">
+            <img src="../../ressources/mare/fondPropre.png" class="parallax-layer" id="propre"
+                style="width:107vw; height:107vh; display: none;" alt="">
+            <img src="../../ressources/mare/maresale.png" alt="" class="parallax-layer" id="sale"
+                style="width:110vw; height:110vh;">
+            <img src="../../ressources/mare/marepropre.png" style="width:110vw; height:110vh; display: none;"
+                class="parallax-layer" id="propre2" alt="">
         </div>
-        <div class="persolif">
-            <div class="div1">
-                <p id="texte">Nous voilà à la mare. Les poissons ont l’air d’être malades à cause de l’eau qui est très
-                    sale... <span class="prenom"></span>, nettoyons
-                    l’eau pour que les poissons reviennent !</p>
+
+        <img id="logo" src="../../ressources/logo.png" alt="">
+
+        <img class="transition" src="../../ressources/transition-nuage.png" alt="">
+
+        <div id="interface">
+            <div class="choix">
+
+                <button class="ramasser" onclick="BonneReponse()">Ramasser</button>
+
+                <button class="continuer" href="../gouter/" id="redirect" style="display: none;">
+                    Aller vers la suite !
+                </button>
             </div>
-            <!-- <div class="div3">
-                <p>Clique sur les déchets pour les ramasser.</p>
-            </div> -->
-            <div class="div2 imglif" id="lif">
+            <div class="persolif">
+                <div class="div1">
+                    <p id="texte">Nous voilà à la mare. Les poissons ont l’air d’être malades à cause de l’eau qui est
+                        très
+                        sale... <span class="prenom"></span>, nettoyons
+                        l’eau pour que les poissons reviennent !</p>
+                </div>
+                <div class="div2 imglif" id="lif">
+                </div>
             </div>
         </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="../../global.js"></script>
+    <script src="../../scripts/global.js"></script>
     <script src="script.js"></script>
+    <script src="../../node_modules/mobile-detect/mobile-detect.js"></script>
     <script src="../../scripts/jquery.parallax.js"></script>
     <script>
         function BonneReponse() {
             localStorage.setItem('score', parseInt(localStorage.getItem('score')) + 1);
         }
 
-        $('.parallax-layer').parallax({
-            mouseport: $("#decor")
-        }, {
-            yparallax: false
-        }, {
-            yparallax: false
-        }, {
-            yparallax: false
-        }, {
-            yparallax: false
-        }, {
-            yparallax: false
-        }, {
-            yparallax: false
-        });
+        const mobileDetect = new MobileDetect(window.navigator.userAgent);
+
+        if (mobileDetect.mobile()) {
+            $('.parallax-layer').parallax({
+                mouseport: $("#decor")
+            }, {
+                yparallax: false,
+                xparallax: false
+            }, {
+                yparallax: false,
+                xparallax: false
+            }, {
+                yparallax: false,
+                xparallax: false
+            }, {
+                yparallax: false,
+                xparallax: false
+            }, {
+                yparallax: false,
+                xparallax: false
+            }, {
+                yparallax: false,
+                xparallax: false
+            });
+        } else {
+            $('.parallax-layer').parallax({
+                mouseport: $("#decor")
+            }, {
+                yparallax: false
+            }, {
+                yparallax: false
+            }, {
+                yparallax: false
+            }, {
+                yparallax: false
+            }, {
+                yparallax: false
+            }, {
+                yparallax: false
+            });
+        }
     </script>
 </body>
 

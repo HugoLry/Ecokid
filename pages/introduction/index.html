@@ -5,37 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1.0, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../styles/global.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(orientation:portrait)" href="../../styles/portrait.css">
     <link rel="icon" type="image/png" href="../../ressources/icon.png" />
     <title>Ecokid</title>
 </head>
 
 <body>
-    <img class="transition" src="../../ressources/transition-nuage.png" alt="">
-
-    <img id="logo" src="../../ressources/logo.png" alt="">
-
-    <img src="../../ressources/introduction/fond.png" alt="" class="background">
-
-    <div class="persolif">
-        <div class="div1">
-            <p id="texte">Salut <span class="prenom"></span> ! Moi c’est Lif, aide nous à guérir ce monde !</p>
+    <div class="portrait">
+        <div class="portrait_img">
+            <img src="../../ressources/icon.png" alt="">
+            <img src="../../ressources/turntel.png" alt="">
         </div>
-        <div class="div2 imglif" id="lif">
-        </div>
+        <p>Ecokid n’est pas disponible dans ce format, tourne ton écran pour jouer !</p>
     </div>
 
-    <input type="button" class="lien begin" value="Bonjour Lif !">
+    <div class="main">
+        <img class="transition" src="../../ressources/transition-nuage.png" alt="">
 
-    <a href="../route/" id="redirect" style="display: none;">
-        <input type="button" class="lien begin" value="C'est parti !">
-    </a>
+        <img id="logo" src="../../ressources/logo.png" alt="">
+
+        <img src="../../ressources/introduction/fond.png" alt="" class="background">
+
+        <div class="persolif">
+            <div class="div1">
+                <p id="texte">Salut <span class="prenom"></span> ! Moi c’est Lif, aide nous à guérir ce monde !</p>
+            </div>
+            <div class="div2 imglif" id="lif">
+            </div>
+        </div>
+
+        <input type="button" class="lien begin" value="Bonjour Lif !">
+
+        <a href="../route/" id="redirect" style="display: none;">
+            <input type="button" class="lien begin" value="C'est parti !">
+        </a>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script src="../../global.js"></script>
-
+    <script src="../../scripts/global.js"></script>
+    <script src="../../node_modules/mobile-detect/mobile-detect.js"></script>
+    <script>
+        const mobileDetect = new MobileDetect(window.navigator.userAgent);
+        console.log(window.innerWidth);
+        if (mobileDetect.mobile() && window.innerWidth <= 500) {
+            console.log('yes2')
+            $('#texte').css('font-size', '0.5rem');
+        } else if (mobileDetect.mobile() && window.innerWidth <= 700) {
+            console.log('yes2')
+            $('#texte').css('font-size', '0.7rem');
+        } else if (mobileDetect.mobile()) {
+            $('#texte').css('font-size', '0.8rem');
+            console.log('yes')
+        }
+    </script>
 </body>
 
 </html>

@@ -6,53 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecokid</title>
     <link rel="shortcut icon" href="../../ressources/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../styles/global.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(orientation:portrait)" href="../../styles/portrait.css">
 </head>
 
 <body>
-    <img src="../../ressources/transition-nuage.png" alt="" class="transition">
-
-    <img id="logo" src="../../ressources/logo.png" alt="">
-
-    <div id="port">
-        <img src="../../ressources/salon/vueexterieure.png" class="parallax-layer" style="width:100vw; height:100vh;"
-            alt="">
-        <img src="../../ressources/salon/fond.png" class="parallax-layer" style="width:103vw; height:103vh;" alt="">
-        <img src="../../ressources/salon/meubles.png" class="parallax-layer" style="width:104vw; height:104vh;" alt="">
+    <div class="portrait">
+        <div class="portrait_img">
+            <img src="../../ressources/icon.png" alt="">
+            <img src="../../ressources/turntel.png" alt="">
+        </div>
+        <p>Ecokid n’est pas disponible dans ce format, tourne ton écran pour jouer !</p>
     </div>
 
-    <div id="fond">
-        <div class="choix">
-            <button class="valid" id="redirect" href="../final/">Bonne idée !</button>
+    <div class="main">
+        <img src="../../ressources/transition-nuage.png" alt="" class="transition">
+
+        <img id="logo" src="../../ressources/logo.png" alt="">
+
+        <div id="port">
+            <img src="../../ressources/salon/vueexterieure.png" class="parallax-layer"
+                style="width:100vw; height:100vh;" alt="">
+            <img src="../../ressources/salon/fond.png" class="parallax-layer" style="width:103vw; height:103vh;" alt="">
+            <img src="../../ressources/salon/meubles.png" class="parallax-layer" style="width:104vw; height:104vh;"
+                alt="">
         </div>
-        <div class="persolif">
-            <div class="div1">
-                <p><span class="prenom"></span>, nous devrions aller voir par la fenêtre comment s’est rétabli la
-                    planète après notre travail...</p>
+
+        <div id="fond">
+            <div class="choix">
+                <button class="valid" id="redirect" href="../final/">Bonne idée !</button>
             </div>
-            <div class="div2 imglif">
+            <div class="persolif">
+                <div class="div1">
+                    <p><span class="prenom"></span>, nous devrions aller voir par la fenêtre comment s’est rétabli la
+                        planète après notre travail...</p>
+                </div>
+                <div class="div2 imglif">
+                </div>
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="../../scripts/jquery.parallax.js"></script>
+    <script src="../../scripts/global.js"></script>
+    <script src="../../node_modules/mobile-detect/mobile-detect.js"></script>
     <script src="script.js"></script>
-    <script src="../../global.js"></script>
     <script type="text/javascript">
-        jQuery(document).ready(function () {
-            jQuery('.parallax-layer').parallax({
-                mouseport: jQuery("body")
-            }, {
-                yparallax: false
-            }, {
-                yparallax: false
-            }, {
-                yparallax: false
+        const mobileDetect = new MobileDetect(window.navigator.userAgent);
+
+        if (mobileDetect.mobile() && window.innerWidth <= 500) {
+            $('.div1 p').css('font-size', '0.45rem');
+        } else if (mobileDetect.mobile() && window.innerWidth <= 700) {
+            $('.div1 p').css('font-size', '0.7rem');
+        } else if (mobileDetect.mobile()) {
+            $('.div1 p').css('font-size', '0.8rem');
+        }
+
+        if (mobileDetect.mobile()) {
+            jQuery(document).ready(function () {
+                jQuery('.parallax-layer').parallax({
+                    mouseport: jQuery("body")
+                }, {
+                    yparallax: false,
+                    xparallax: false
+                }, {
+                    yparallax: false,
+                    xparallax: false
+                }, {
+                    yparallax: false,
+                    xparallax: false
+                });
             });
-        });
+        } else {
+            jQuery(document).ready(function () {
+                jQuery('.parallax-layer').parallax({
+                    mouseport: jQuery("body")
+                }, {
+                    yparallax: false
+                }, {
+                    yparallax: false
+                }, {
+                    yparallax: false
+                });
+            });
+        }
     </script>
 </body>
 

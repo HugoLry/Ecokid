@@ -6,7 +6,7 @@ $(document).ready(function () {
     }, 2000);
 
 
-    $(':is(.baignoire, .douche)').click(function () {
+    $('.baignoire, .douche').click(function () {
         if ($(this).attr("class") == 'douche') {
             $('.div1 p').text(`Très bon choix ${prenom} ! La douche va économiser beaucoup plus d'eau contrairement à un bain !`);
             $('.tochange').last().fadeTo("slow", 0, () => {
@@ -19,8 +19,8 @@ $(document).ready(function () {
             })
         }
 
-        $(':is(.douche, .baignoire)').fadeTo("slow", 0, () => {
-            $(':is(.douche, .baignoire)').fadeOut(0, () => {
+        $('.douche, .baignoire').fadeTo("slow", 0, () => {
+            $('.douche, .baignoire').fadeOut(0, () => {
                 setTimeout(() => {
                     $('.valid').fadeTo("slow", 1);
                 }, 500);
@@ -36,7 +36,7 @@ $(document).ready(function () {
             $('.valid').fadeTo("slow", 0, () => {
                 $('.valid').fadeOut(0, () => {
                     setTimeout(() => {
-                        $(':is(.laisser, .fermer)').fadeTo("slow", 1);
+                        $('.laisser, .fermer').fadeTo("slow", 1);
                         $('.fermer').css("width", $('.laisser').innerWidth() + "px")
                     }, 500);
                 });
@@ -64,16 +64,16 @@ $(document).ready(function () {
         }
     })
 
-    $(':is(.laisser, .fermer)').click(function () {
+    $('.laisser, .fermer').click(function () {
         if ($(this).attr('class') == "fermer") {
             $('.div1 p').text("Oui ! Couper l'eau du robinet pendant le brossage de dents permet d'éviter de gaspiller de l'eau.")
         } else if ($(this).attr('class') == "laisser") {
             $('.div1 p').text("En laissant l'eau du robinet couler pendant le brossage de dents, tu gaspilles beaucoup plus d'eau que si tu la coupais !")
         }
         rep = 1;
-        $(':is(.laisser, .fermer)').fadeTo("slow", 0, () => {
+        $('.laisser, .fermer').fadeTo("slow", 0, () => {
             setTimeout(() => {
-                $(':is(.laisser, .fermer)').fadeOut(0, () => {
+                $('.laisser, .fermer').fadeOut(0, () => {
                     $('.valid').fadeTo("slow", 1);
                 });
             }, 500);
@@ -81,7 +81,7 @@ $(document).ready(function () {
     })
 
     $('.eteindre').click(() => {
-        $(':is(.eteindre, .lumiere)').fadeTo("slow", 0, () => {
+        $('.eteindre, .lumiere').fadeTo("slow", 0, () => {
             setTimeout(() => {
                 $('.eteindre').fadeOut(0, () => {
                     $('#redirect').fadeTo("slow", 1);
