@@ -24,7 +24,7 @@
     <div class="main">
         <img src="../../ressources/transition-nuage.png" alt="" class="transition">
 
-        <div id="decor" style="max-height:100vh;max-width:100vw;overflow-x: hidden;overflow-y: hidden;">
+        <div id="decor">
             <img src="../../ressources/route/fond_bleu.png" class="parallax-layer" style="width:101vw; height:101vh;"
                 alt="">
             <img src="../../ressources/route/fond-nuage.png" id="fond" class="parallax-layer"
@@ -38,6 +38,20 @@
             <img src="../../ressources/route/route.png" style="width:110vw; height:100vh;" class="parallax-layer route"
                 alt="">
             <img src="../../ressources/route/dechets.png" style="width:110vw; height:100vh;" class="dechets" alt="">
+        </div>
+
+        <div id="decor_mobile">
+            <img src="../../ressources/route/mobile/fond_bleu.png" class="parallax-layer" style="width:100vw; height:100vh;"
+                alt="">
+            <img src="../../ressources/route/mobile/fond-nuage.png" id="fond" class="parallax-layer"
+                style="width:100vw; height:100vh;" alt="">
+            <img src="../../ressources/route/mobile/immeuble-montagnes.png" class="parallax-layer"
+                style="width:100vw; height:100h;" alt="">
+            <img src="../../ressources/route/mobile/nuages-sale.png" class="parallax-layer nuages"
+                style="width:100vw; height:100vh;" alt="">
+            <img src="../../ressources/route/mobile/route.png" style="width:100vw; height:100vh;" class="parallax-layer"
+                alt="">
+            <img src="../../ressources/route/mobile/dechets.png" style="width:100vw; height:100vh;" class="parallax-layer dechets" alt="">
         </div>
 
         <img id="logo" src="../../ressources/logo.png" alt="">
@@ -94,36 +108,41 @@
         const mobileDetect = new MobileDetect(window.navigator.userAgent);
 
         if (mobileDetect.mobile()) {
-            $('.avion').remove()
-            $('.parallax-layer').parallax({
-                mouseport: $("body")
-            }, {
-                yparallax: false,
-                xparallax: false
-            }, {
-                yparallax: false,
-                xparallax: false
-            }, {
-                yparallax: false,
-                xparallax: false
-            }, {
-                yparallax: false,
-                xparallax: false
-            }, {
-                yparallax: false,
-                xparallax: false
-            }, {
-                yparallax: false,
-                xparallax: false
-            });
+            $('#decor').remove()
+            // $('.parallax-layer').css({
+            //     'width': '100vw',
+            //     'height': '100vh'
+            // });
+            // $('.parallax-layer').parallax({
+            //     mouseport: $("body")
+            // }, {
+            //     yparallax: false,
+            //     xparallax: false
+            // }, {
+            //     yparallax: false,
+            //     xparallax: false
+            // }, {
+            //     yparallax: false,
+            //     xparallax: false
+            // }, {
+            //     yparallax: false,
+            //     xparallax: false
+            // }, {
+            //     yparallax: false,
+            //     xparallax: false
+            // }, {
+            //     yparallax: false,
+            //     xparallax: false
+            // });
 
-            $('.dechets').parallax({
-                mouseport: $("body")
-            }, {
-                yparallax: false,
-                xparallax: false
-            });
+            // $('.dechets').parallax({
+            //     mouseport: $("body")
+            // }, {
+            //     yparallax: false,
+            //     xparallax: false
+            // });
         } else {
+            $('#decor_mobile').remove()
             $('.parallax-layer').parallax({
                 mouseport: $("body")
             }, {

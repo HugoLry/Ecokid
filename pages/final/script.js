@@ -21,6 +21,7 @@ $(document).ready(function () {
     })
 
     $('.rep2').click(() => {
+        $('.div2').css('background-image', 'url("../../ressources/lif/lifngauche.png")')
         $('.fenetre').css('top', '0vh')
         setTimeout(() => {
             $('.div1 p').text(`Quelle journée ! Bravo ${prenom} ! Voici ta médaille de l’écologie que tu peux montrer à tes amis ! Je te remercie pour ton aide précieuse !`)

@@ -8,6 +8,7 @@ $(document).ready(function () {
                 $('.validation').css('opacity', '1')
             });
         }, 700);
+        $('.div2').css('background-image', 'url(../../ressources/lif/lifngauche.png)')
         $('#texte').text("Oui c'est exactement ce qu'il faut faire pour ne pas polluer la planète. Ramassons-les !");
     })
 
@@ -110,6 +111,7 @@ $(document).ready(function () {
 
     $('.reponse3').click(() => {
         $('.reponse3, .reponse4').fadeOut("slow")
+        $('.div2').css('background-image', 'url(../../ressources/lif/lifngauche.png)')
         $('#texte').text("Oui très bien ! Trier les déchets va permettre de les recycler et de les transformer en de nouveaux objets.");
         $('.poubelles').last().css('opacity', '0');
         setTimeout(() => {
@@ -143,6 +145,7 @@ $(document).ready(function () {
         $('.reponse5, .reponse6').fadeOut("slow", () => {
             $('#redirect').fadeIn(500)
         });
+        $('.div2').css('background-image', 'url(../../ressources/lif/lifngauche.png)')
         $('#texte').text("Très bon choix ! Le vélo ne va pas polluer contrairement à la voiture. En plus, c'est beaucoup plus amusant !");
     })
 
@@ -153,6 +156,7 @@ $(document).ready(function () {
         $('.reponse5, .reponse6').fadeOut("slow", () => {
             $('#redirect').fadeIn(500)
         });
+        $('.div2').css('background-image', 'url(../../ressources/lif/lifsgauche.png)')
         $('#texte').text("La voiture pollue beaucoup plus que le vélo et c'est beaucoup moins amusant...");
     })
 });
