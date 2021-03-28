@@ -39,7 +39,7 @@ $(window).on('load', function () {
     $('#logo').click(() => {
         transitionOut();
         setTimeout(() => {
-            document.location.href = "/devsecret/";
+            document.location.href = "/";
         }, 2000);
     })
 

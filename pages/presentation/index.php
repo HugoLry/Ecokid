@@ -14,8 +14,6 @@
 
 <body>
     <?php
-    // $db = new PDO('mysql:host=localhost;dbname=ecokid', 'root', '');
-    // $db = new PDO('mysql:host=sqletud.u-pem.fr;dbname=aolivrie_db', 'aolivrie', 'n48suuqiiJ');
     $db = new PDO('mysql:host=localhost:3306;dbname=ecokid', 'ecokid', 'MAUYjH^7');
 
     if (isset($_POST['user'])) {
