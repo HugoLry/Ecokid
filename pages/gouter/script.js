@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     $('.reponse2').click(() => {
         $('.div2').css('background-image', 'url("../../ressources/lif/lifsdroite.png")');
-        $('#texte').text('J\'aurais bien aimé manger des cookies que nous avons fait nous même, cela aurait permis d\'éviter de jeter trop d\'emballages à la poubelle... et de nous amuser un peu !')
+        $('#texte').text('J\'aurais bien aimé manger des cookies que nous avons faits nous même, cela aurait permis d\'éviter de jeter trop d\'emballages à la poubelle... et de nous amuser un peu !')
         $('.reponse1, .reponse2, #cookies').fadeOut("slow", () => {
             setTimeout(() => {
                 $('#valid').fadeIn("slow");

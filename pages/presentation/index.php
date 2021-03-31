@@ -14,7 +14,9 @@
 
 <body>
     <?php
-    $db = new PDO('mysql:host=localhost:3306;dbname=ecokid', 'ecokid', 'MAUYjH^7');
+    // $db = new PDO('mysql:host=localhost:3306;dbname=ecokid', 'ecokid', 'MAUYjH^7'); // Dyjix
+    // $db = new PDO('mysql:host=localhost;dbname=ecokid', 'root', ''); // XAMPP
+    $db = new PDO('mysql:host=sqletud.u-pem.fr;dbname=aolivrie_db', 'aolivrie', 'n48suuqiiJ'); // Base de donnée UPEM
 
     if (isset($_POST['user'])) {
         $sql = "INSERT INTO user(age, date_post) VALUES ({$_POST['age']}, NOW())";
