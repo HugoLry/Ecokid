@@ -7,7 +7,7 @@ $(document).ready(function () {
     const prenom = localStorage.getItem('prenom');
     $('.prenom').text(prenom);
     if (localStorage.getItem('score') < 7) {
-        $('.div1 p').text('Nous avons bien travaillé mais pas tous nos choix ont été justes pour soigner entièrement la planète.');
+        $('.div1 p').text('Nous avons bien travaillé mais tous nos choix n\'étaient pas justes pour soigner entièrement la planète.');
         $('.rep1').text('Quel dommage...')
     }
 
